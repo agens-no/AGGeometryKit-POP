@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGKQuadControlsSample">
+            <connections>
+                <outlet property="bottomLeftControl" destination="17" id="46"/>
+                <outlet property="bottomRightControl" destination="25" id="47"/>
+                <outlet property="imageView" destination="6" id="12"/>
+                <outlet property="topLeftControl" destination="23" id="45"/>
+                <outlet property="topRightControl" destination="24" id="48"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="sample_image.jpg" id="6">
+                    <rect key="frame" x="0.0" y="0.0" width="904" height="570"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drag corners" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P33-MX-FcV">
+                    <rect key="frame" x="350" y="706" width="325" height="50"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                    <color key="textColor" red="0.20051332853025938" green="0.20051332853025938" blue="0.20051332853025938" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView contentMode="TopLeft" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="23" userLabel="Top Left">
+                    <rect key="frame" x="45" y="60" width="46" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="18" appends="YES" id="42"/>
+                    </connections>
+                </imageView>
+                <imageView contentMode="TopLeft" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="24" userLabel="Top Right">
+                    <rect key="frame" x="943" y="60" width="46" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="28" appends="YES" id="43"/>
+                    </connections>
+                </imageView>
+                <imageView contentMode="TopLeft" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="17" userLabel="Bottom Left">
+                    <rect key="frame" x="45" y="620" width="46" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="30" appends="YES" id="40"/>
+                    </connections>
+                </imageView>
+                <imageView contentMode="TopLeft" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="25" userLabel="Bottom Right">
+                    <rect key="frame" x="943" y="620" width="46" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="26" appends="YES" id="44"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="18" userLabel="Top Left">
+            <connections>
+                <action selector="topLeftChanged:" destination="-1" id="LBM-fF-QeZ"/>
+            </connections>
+        </panGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="28" userLabel="Top Right">
+            <connections>
+                <action selector="topRightChanged:" destination="-1" id="2ZS-Xc-308"/>
+            </connections>
+        </panGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="30" userLabel="Bottom Left">
+            <connections>
+                <action selector="bottomLeftChanged:" destination="-1" id="paR-od-6pl"/>
+            </connections>
+        </panGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="26" userLabel="Bottom Right">
+            <connections>
+                <action selector="bottomRightChanged:" destination="-1" id="URz-IJ-XXH"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="controlpoint.png" width="45" height="45"/>
+        <image name="controlpoint_h.png" width="45" height="45"/>
+        <image name="sample_image.jpg" width="1024" height="682"/>
+    </resources>
+</document>

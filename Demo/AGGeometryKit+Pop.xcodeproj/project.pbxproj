@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		231781CBDDC74E14B29E5F8D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB448A401834AD389990A4B /* libPods.a */; };
+		A304375F191B8E2D00EB1145 /* AGGeometryKitApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = A304375E191B8E2D00EB1145 /* AGGeometryKitApplication.xib */; };
+		A3043761191B8EE000EB1145 /* tabbar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3043760191B8EE000EB1145 /* tabbar_icon.png */; };
+		A3043765191B8F2100EB1145 /* AGKQuadControlsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3043763191B8F2100EB1145 /* AGKQuadControlsSample.m */; };
+		A3043766191B8F2100EB1145 /* AGKQuadControlsSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3043764191B8F2100EB1145 /* AGKQuadControlsSample.xib */; };
+		A304376D191B8FBA00EB1145 /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A304376B191B8FBA00EB1145 /* controlpoint.png */; };
+		A304376E191B8FBA00EB1145 /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A304376C191B8FBA00EB1145 /* controlpoint_h.png */; };
+		A3043771191BB5FA00EB1145 /* sample_image@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A304376F191BB5FA00EB1145 /* sample_image@2x.jpg */; };
+		A3043772191BB5FA00EB1145 /* sample_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043770191BB5FA00EB1145 /* sample_image.jpg */; };
+		A3043775191BBF3E00EB1145 /* Box_Closed.png in Resources */ = {isa = PBXBuildFile; fileRef = A3043773191BBF3E00EB1145 /* Box_Closed.png */; };
+		A3043776191BBF3E00EB1145 /* Box_Closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3043774191BBF3E00EB1145 /* Box_Closed@2x.png */; };
+		A3043778191BBFD400EB1145 /* AGKFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3043777191BBFD400EB1145 /* AGKFirstViewController.xib */; };
+		A304377B191BC2E400EB1145 /* sample_image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043779191BC2E400EB1145 /* sample_image2.jpg */; };
+		A304377C191BC2E400EB1145 /* sample_image2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A304377A191BC2E400EB1145 /* sample_image2@2x.jpg */; };
+		A304377E191CB7D900EB1145 /* AGKSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A304377D191CB7D900EB1145 /* AGKSecondViewController.xib */; };
+		A3043781191CB8E700EB1145 /* sample_image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A304377F191CB8E700EB1145 /* sample_image3.jpg */; };
+		A3043782191CB8E700EB1145 /* sample_image3@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043780191CB8E700EB1145 /* sample_image3@2x.jpg */; };
+		A3043785191CB9C400EB1145 /* sample_image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043783191CB9C400EB1145 /* sample_image4.jpg */; };
+		A3043786191CB9C400EB1145 /* sample_image4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043784191CB9C400EB1145 /* sample_image4@2x.jpg */; };
+		A3D4C7EB191B876400DB2C8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C7EA191B876400DB2C8F /* Foundation.framework */; };
+		A3D4C7ED191B876400DB2C8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C7EC191B876400DB2C8F /* CoreGraphics.framework */; };
+		A3D4C7EF191B876400DB2C8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C7EE191B876400DB2C8F /* UIKit.framework */; };
+		A3D4C7F5191B876400DB2C8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D4C7F3191B876400DB2C8F /* InfoPlist.strings */; };
+		A3D4C7F7191B876400DB2C8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C7F6191B876400DB2C8F /* main.m */; };
+		A3D4C7FB191B876400DB2C8F /* AGKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C7FA191B876400DB2C8F /* AGKAppDelegate.m */; };
+		A3D4C804191B876400DB2C8F /* AGKFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C803191B876400DB2C8F /* AGKFirstViewController.m */; };
+		A3D4C807191B876400DB2C8F /* AGKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C806191B876400DB2C8F /* AGKSecondViewController.m */; };
+		A3D4C809191B876400DB2C8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3D4C808191B876400DB2C8F /* Images.xcassets */; };
+		A3D4C810191B876400DB2C8F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C80F191B876400DB2C8F /* XCTest.framework */; };
+		A3D4C811191B876400DB2C8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C7EA191B876400DB2C8F /* Foundation.framework */; };
+		A3D4C812191B876400DB2C8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C7EE191B876400DB2C8F /* UIKit.framework */; };
+		A3D4C81A191B876400DB2C8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D4C818191B876400DB2C8F /* InfoPlist.strings */; };
+		A3D4C81C191B876400DB2C8F /* AGGeometryKit_PopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C81B191B876400DB2C8F /* AGGeometryKit_PopTests.m */; };
+		A3D4C828191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C827191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.m */; };
+		A3E67AF01920B6A300A4CD4A /* sample_image5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AEE1920B6A300A4CD4A /* sample_image5.jpg */; };
+		A3E67AF11920B6A300A4CD4A /* sample_image5@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AEF1920B6A300A4CD4A /* sample_image5@2x.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3D4C813191B876400DB2C8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D4C7DF191B876400DB2C8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3D4C7E6191B876400DB2C8F;
+			remoteInfo = "AGGeometryKit+Pop";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BB448A401834AD389990A4B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A304375E191B8E2D00EB1145 /* AGGeometryKitApplication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGGeometryKitApplication.xib; sourceTree = "<group>"; };
+		A3043760191B8EE000EB1145 /* tabbar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_icon.png; sourceTree = "<group>"; };
+		A3043762191B8F2100EB1145 /* AGKQuadControlsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKQuadControlsSample.h; sourceTree = "<group>"; };
+		A3043763191B8F2100EB1145 /* AGKQuadControlsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadControlsSample.m; sourceTree = "<group>"; };
+		A3043764191B8F2100EB1145 /* AGKQuadControlsSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKQuadControlsSample.xib; sourceTree = "<group>"; };
+		A304376B191B8FBA00EB1145 /* controlpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint.png; sourceTree = "<group>"; };
+		A304376C191B8FBA00EB1145 /* controlpoint_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint_h.png; sourceTree = "<group>"; };
+		A304376F191BB5FA00EB1145 /* sample_image@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image@2x.jpg"; sourceTree = "<group>"; };
+		A3043770191BB5FA00EB1145 /* sample_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image.jpg; sourceTree = "<group>"; };
+		A3043773191BBF3E00EB1145 /* Box_Closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Box_Closed.png; sourceTree = "<group>"; };
+		A3043774191BBF3E00EB1145 /* Box_Closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box_Closed@2x.png"; sourceTree = "<group>"; };
+		A3043777191BBFD400EB1145 /* AGKFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKFirstViewController.xib; sourceTree = "<group>"; };
+		A3043779191BC2E400EB1145 /* sample_image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image2.jpg; sourceTree = "<group>"; };
+		A304377A191BC2E400EB1145 /* sample_image2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image2@2x.jpg"; sourceTree = "<group>"; };
+		A304377D191CB7D900EB1145 /* AGKSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKSecondViewController.xib; sourceTree = "<group>"; };
+		A304377F191CB8E700EB1145 /* sample_image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image3.jpg; sourceTree = "<group>"; };
+		A3043780191CB8E700EB1145 /* sample_image3@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image3@2x.jpg"; sourceTree = "<group>"; };
+		A3043783191CB9C400EB1145 /* sample_image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image4.jpg; sourceTree = "<group>"; };
+		A3043784191CB9C400EB1145 /* sample_image4@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image4@2x.jpg"; sourceTree = "<group>"; };
+		A3D4C7E7191B876400DB2C8F /* AGGeometryKit+Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AGGeometryKit+Pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3D4C7EA191B876400DB2C8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3D4C7EC191B876400DB2C8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A3D4C7EE191B876400DB2C8F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A3D4C7F2191B876400DB2C8F /* AGGeometryKit+Pop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AGGeometryKit+Pop-Info.plist"; sourceTree = "<group>"; };
+		A3D4C7F4191B876400DB2C8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3D4C7F6191B876400DB2C8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3D4C7F8191B876400DB2C8F /* AGGeometryKit+Pop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKit+Pop-Prefix.pch"; sourceTree = "<group>"; };
+		A3D4C7F9191B876400DB2C8F /* AGKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGKAppDelegate.h; sourceTree = "<group>"; };
+		A3D4C7FA191B876400DB2C8F /* AGKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGKAppDelegate.m; sourceTree = "<group>"; };
+		A3D4C802191B876400DB2C8F /* AGKFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGKFirstViewController.h; sourceTree = "<group>"; };
+		A3D4C803191B876400DB2C8F /* AGKFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGKFirstViewController.m; sourceTree = "<group>"; };
+		A3D4C805191B876400DB2C8F /* AGKSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGKSecondViewController.h; sourceTree = "<group>"; };
+		A3D4C806191B876400DB2C8F /* AGKSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGKSecondViewController.m; sourceTree = "<group>"; };
+		A3D4C808191B876400DB2C8F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A3D4C80E191B876400DB2C8F /* AGGeometryKit+PopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AGGeometryKit+PopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3D4C80F191B876400DB2C8F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A3D4C817191B876400DB2C8F /* AGGeometryKit+PopTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AGGeometryKit+PopTests-Info.plist"; sourceTree = "<group>"; };
+		A3D4C819191B876400DB2C8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3D4C81B191B876400DB2C8F /* AGGeometryKit_PopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGGeometryKit_PopTests.m; sourceTree = "<group>"; };
+		A3D4C826191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POPAnimatableProperty+AGGeometryKit.h"; sourceTree = "<group>"; };
+		A3D4C827191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "POPAnimatableProperty+AGGeometryKit.m"; sourceTree = "<group>"; };
+		A3E67AEE1920B6A300A4CD4A /* sample_image5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image5.jpg; sourceTree = "<group>"; };
+		A3E67AEF1920B6A300A4CD4A /* sample_image5@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image5@2x.jpg"; sourceTree = "<group>"; };
+		DCD9FE95B13A451FA0718F04 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3D4C7E4191B876400DB2C8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D4C7ED191B876400DB2C8F /* CoreGraphics.framework in Frameworks */,
+				A3D4C7EF191B876400DB2C8F /* UIKit.framework in Frameworks */,
+				A3D4C7EB191B876400DB2C8F /* Foundation.framework in Frameworks */,
+				231781CBDDC74E14B29E5F8D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3D4C80B191B876400DB2C8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D4C810191B876400DB2C8F /* XCTest.framework in Frameworks */,
+				A3D4C812191B876400DB2C8F /* UIKit.framework in Frameworks */,
+				A3D4C811191B876400DB2C8F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3D4C7DE191B876400DB2C8F = {
+			isa = PBXGroup;
+			children = (
+				A3D4C825191B885000DB2C8F /* Source */,
+				A3D4C7F0191B876400DB2C8F /* AGGeometryKit+Pop */,
+				A3D4C815191B876400DB2C8F /* AGGeometryKit+PopTests */,
+				A3D4C7E9191B876400DB2C8F /* Frameworks */,
+				A3D4C7E8191B876400DB2C8F /* Products */,
+				DCD9FE95B13A451FA0718F04 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A3D4C7E8191B876400DB2C8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4C7E7191B876400DB2C8F /* AGGeometryKit+Pop.app */,
+				A3D4C80E191B876400DB2C8F /* AGGeometryKit+PopTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3D4C7E9191B876400DB2C8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4C7EA191B876400DB2C8F /* Foundation.framework */,
+				A3D4C7EC191B876400DB2C8F /* CoreGraphics.framework */,
+				A3D4C7EE191B876400DB2C8F /* UIKit.framework */,
+				A3D4C80F191B876400DB2C8F /* XCTest.framework */,
+				3BB448A401834AD389990A4B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3D4C7F0191B876400DB2C8F /* AGGeometryKit+Pop */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4C7F9191B876400DB2C8F /* AGKAppDelegate.h */,
+				A3D4C7FA191B876400DB2C8F /* AGKAppDelegate.m */,
+				A304375E191B8E2D00EB1145 /* AGGeometryKitApplication.xib */,
+				A3D4C802191B876400DB2C8F /* AGKFirstViewController.h */,
+				A3D4C803191B876400DB2C8F /* AGKFirstViewController.m */,
+				A3043777191BBFD400EB1145 /* AGKFirstViewController.xib */,
+				A3D4C805191B876400DB2C8F /* AGKSecondViewController.h */,
+				A3D4C806191B876400DB2C8F /* AGKSecondViewController.m */,
+				A304377D191CB7D900EB1145 /* AGKSecondViewController.xib */,
+				A3043762191B8F2100EB1145 /* AGKQuadControlsSample.h */,
+				A3043763191B8F2100EB1145 /* AGKQuadControlsSample.m */,
+				A3043764191B8F2100EB1145 /* AGKQuadControlsSample.xib */,
+				A3043760191B8EE000EB1145 /* tabbar_icon.png */,
+				A3043770191BB5FA00EB1145 /* sample_image.jpg */,
+				A304376F191BB5FA00EB1145 /* sample_image@2x.jpg */,
+				A3043779191BC2E400EB1145 /* sample_image2.jpg */,
+				A304377A191BC2E400EB1145 /* sample_image2@2x.jpg */,
+				A304377F191CB8E700EB1145 /* sample_image3.jpg */,
+				A3043780191CB8E700EB1145 /* sample_image3@2x.jpg */,
+				A3043783191CB9C400EB1145 /* sample_image4.jpg */,
+				A3043784191CB9C400EB1145 /* sample_image4@2x.jpg */,
+				A3E67AEE1920B6A300A4CD4A /* sample_image5.jpg */,
+				A3E67AEF1920B6A300A4CD4A /* sample_image5@2x.jpg */,
+				A304376B191B8FBA00EB1145 /* controlpoint.png */,
+				A304376C191B8FBA00EB1145 /* controlpoint_h.png */,
+				A3043773191BBF3E00EB1145 /* Box_Closed.png */,
+				A3043774191BBF3E00EB1145 /* Box_Closed@2x.png */,
+				A3D4C808191B876400DB2C8F /* Images.xcassets */,
+				A3D4C7F1191B876400DB2C8F /* Supporting Files */,
+			);
+			path = "AGGeometryKit+Pop";
+			sourceTree = "<group>";
+		};
+		A3D4C7F1191B876400DB2C8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4C7F2191B876400DB2C8F /* AGGeometryKit+Pop-Info.plist */,
+				A3D4C7F3191B876400DB2C8F /* InfoPlist.strings */,
+				A3D4C7F6191B876400DB2C8F /* main.m */,
+				A3D4C7F8191B876400DB2C8F /* AGGeometryKit+Pop-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3D4C815191B876400DB2C8F /* AGGeometryKit+PopTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4C81B191B876400DB2C8F /* AGGeometryKit_PopTests.m */,
+				A3D4C816191B876400DB2C8F /* Supporting Files */,
+			);
+			path = "AGGeometryKit+PopTests";
+			sourceTree = "<group>";
+		};
+		A3D4C816191B876400DB2C8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4C817191B876400DB2C8F /* AGGeometryKit+PopTests-Info.plist */,
+				A3D4C818191B876400DB2C8F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3D4C825191B885000DB2C8F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A3D4C826191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.h */,
+				A3D4C827191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.m */,
+			);
+			name = Source;
+			path = ../Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3D4C7E6191B876400DB2C8F /* AGGeometryKit+Pop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3D4C81F191B876400DB2C8F /* Build configuration list for PBXNativeTarget "AGGeometryKit+Pop" */;
+			buildPhases = (
+				68AEB9E72ADA4ED39B9AFDB3 /* Check Pods Manifest.lock */,
+				A3D4C7E3191B876400DB2C8F /* Sources */,
+				A3D4C7E4191B876400DB2C8F /* Frameworks */,
+				A3D4C7E5191B876400DB2C8F /* Resources */,
+				9FF7F717095C4E6D9370B726 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AGGeometryKit+Pop";
+			productName = "AGGeometryKit+Pop";
+			productReference = A3D4C7E7191B876400DB2C8F /* AGGeometryKit+Pop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3D4C80D191B876400DB2C8F /* AGGeometryKit+PopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3D4C822191B876400DB2C8F /* Build configuration list for PBXNativeTarget "AGGeometryKit+PopTests" */;
+			buildPhases = (
+				A3D4C80A191B876400DB2C8F /* Sources */,
+				A3D4C80B191B876400DB2C8F /* Frameworks */,
+				A3D4C80C191B876400DB2C8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3D4C814191B876400DB2C8F /* PBXTargetDependency */,
+			);
+			name = "AGGeometryKit+PopTests";
+			productName = "AGGeometryKit+PopTests";
+			productReference = A3D4C80E191B876400DB2C8F /* AGGeometryKit+PopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3D4C7DF191B876400DB2C8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AGK;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Agens AS";
+				TargetAttributes = {
+					A3D4C80D191B876400DB2C8F = {
+						TestTargetID = A3D4C7E6191B876400DB2C8F;
+					};
+				};
+			};
+			buildConfigurationList = A3D4C7E2191B876400DB2C8F /* Build configuration list for PBXProject "AGGeometryKit+Pop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3D4C7DE191B876400DB2C8F;
+			productRefGroup = A3D4C7E8191B876400DB2C8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3D4C7E6191B876400DB2C8F /* AGGeometryKit+Pop */,
+				A3D4C80D191B876400DB2C8F /* AGGeometryKit+PopTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3D4C7E5191B876400DB2C8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3043771191BB5FA00EB1145 /* sample_image@2x.jpg in Resources */,
+				A3043782191CB8E700EB1145 /* sample_image3@2x.jpg in Resources */,
+				A304377B191BC2E400EB1145 /* sample_image2.jpg in Resources */,
+				A3D4C809191B876400DB2C8F /* Images.xcassets in Resources */,
+				A304376E191B8FBA00EB1145 /* controlpoint_h.png in Resources */,
+				A304375F191B8E2D00EB1145 /* AGGeometryKitApplication.xib in Resources */,
+				A3043785191CB9C400EB1145 /* sample_image4.jpg in Resources */,
+				A3043766191B8F2100EB1145 /* AGKQuadControlsSample.xib in Resources */,
+				A3043778191BBFD400EB1145 /* AGKFirstViewController.xib in Resources */,
+				A3E67AF01920B6A300A4CD4A /* sample_image5.jpg in Resources */,
+				A3043781191CB8E700EB1145 /* sample_image3.jpg in Resources */,
+				A3E67AF11920B6A300A4CD4A /* sample_image5@2x.jpg in Resources */,
+				A304377C191BC2E400EB1145 /* sample_image2@2x.jpg in Resources */,
+				A3043786191CB9C400EB1145 /* sample_image4@2x.jpg in Resources */,
+				A3043772191BB5FA00EB1145 /* sample_image.jpg in Resources */,
+				A3043761191B8EE000EB1145 /* tabbar_icon.png in Resources */,
+				A304376D191B8FBA00EB1145 /* controlpoint.png in Resources */,
+				A3D4C7F5191B876400DB2C8F /* InfoPlist.strings in Resources */,
+				A3043776191BBF3E00EB1145 /* Box_Closed@2x.png in Resources */,
+				A3043775191BBF3E00EB1145 /* Box_Closed.png in Resources */,
+				A304377E191CB7D900EB1145 /* AGKSecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3D4C80C191B876400DB2C8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D4C81A191B876400DB2C8F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68AEB9E72ADA4ED39B9AFDB3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FF7F717095C4E6D9370B726 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3D4C7E3191B876400DB2C8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D4C804191B876400DB2C8F /* AGKFirstViewController.m in Sources */,
+				A3D4C7FB191B876400DB2C8F /* AGKAppDelegate.m in Sources */,
+				A3D4C807191B876400DB2C8F /* AGKSecondViewController.m in Sources */,
+				A3D4C828191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.m in Sources */,
+				A3043765191B8F2100EB1145 /* AGKQuadControlsSample.m in Sources */,
+				A3D4C7F7191B876400DB2C8F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3D4C80A191B876400DB2C8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3D4C81C191B876400DB2C8F /* AGGeometryKit_PopTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3D4C814191B876400DB2C8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3D4C7E6191B876400DB2C8F /* AGGeometryKit+Pop */;
+			targetProxy = A3D4C813191B876400DB2C8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3D4C7F3191B876400DB2C8F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3D4C7F4191B876400DB2C8F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A3D4C818191B876400DB2C8F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3D4C819191B876400DB2C8F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3D4C81D191B876400DB2C8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A3D4C81E191B876400DB2C8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3D4C820191B876400DB2C8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD9FE95B13A451FA0718F04 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AGGeometryKit+Pop/AGGeometryKit+Pop-Prefix.pch";
+				INFOPLIST_FILE = "AGGeometryKit+Pop/AGGeometryKit+Pop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A3D4C821191B876400DB2C8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD9FE95B13A451FA0718F04 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AGGeometryKit+Pop/AGGeometryKit+Pop-Prefix.pch";
+				INFOPLIST_FILE = "AGGeometryKit+Pop/AGGeometryKit+Pop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A3D4C823191B876400DB2C8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AGGeometryKit+Pop.app/AGGeometryKit+Pop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AGGeometryKit+Pop/AGGeometryKit+Pop-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AGGeometryKit+PopTests/AGGeometryKit+PopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A3D4C824191B876400DB2C8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AGGeometryKit+Pop.app/AGGeometryKit+Pop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AGGeometryKit+Pop/AGGeometryKit+Pop-Prefix.pch";
+				INFOPLIST_FILE = "AGGeometryKit+PopTests/AGGeometryKit+PopTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3D4C7E2191B876400DB2C8F /* Build configuration list for PBXProject "AGGeometryKit+Pop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D4C81D191B876400DB2C8F /* Debug */,
+				A3D4C81E191B876400DB2C8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3D4C81F191B876400DB2C8F /* Build configuration list for PBXNativeTarget "AGGeometryKit+Pop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D4C820191B876400DB2C8F /* Debug */,
+				A3D4C821191B876400DB2C8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3D4C822191B876400DB2C8F /* Build configuration list for PBXNativeTarget "AGGeometryKit+PopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D4C823191B876400DB2C8F /* Debug */,
+				A3D4C824191B876400DB2C8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3D4C7DF191B876400DB2C8F /* Project object */;
+}
