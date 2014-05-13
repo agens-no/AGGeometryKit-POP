@@ -33,13 +33,13 @@
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <nil key="simulatedDestinationMetrics"/>
-            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="yJ8-1c-DFP" id="8">
+            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="11" id="8">
                 <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tabBar>
             <viewControllers>
-                <viewController id="0Fj-8p-zqp" customClass="AGKQuadControlsSample">
+                <viewController id="0Fj-8p-zqp" customClass="AGKDragCornersExample">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="1" image="Box_Closed.png" id="yJ8-1c-DFP"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -48,18 +48,18 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <nil key="simulatedDestinationMetrics"/>
                 </viewController>
-                <viewController id="10" customClass="AGKFirstViewController">
+                <viewController id="qBY-up-gRS" customClass="AGKDragAroundExample">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="2" image="Box_Closed.png" id="11"/>
+                    <tabBarItem key="tabBarItem" title="2" image="Box_Closed.png" id="j49-7k-Mu3"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <nil key="simulatedDestinationMetrics"/>
                 </viewController>
-                <viewController id="qBY-up-gRS" customClass="AGKSecondViewController">
+                <viewController id="10" customClass="AGKTapCardExample">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="3" image="Box_Closed.png" id="j49-7k-Mu3"/>
+                    <tabBarItem key="tabBarItem" title="3" image="Box_Closed.png" id="11"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>

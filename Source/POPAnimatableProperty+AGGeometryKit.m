@@ -1,6 +1,5 @@
 //
 // Author: Håvard Fossli <hfossli@agens.no>
-// Author: https://github.com/kennytm
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //
@@ -59,7 +58,7 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
                   for(int i = 0; i < 4; i++)
                   {
-                      CGPoint p = layer.outerQuadrilateral.v[i];
+                      CGPoint p = layer.quadrilateral.v[i];
                       values[(i*2)] = p.x;
                       values[(i*2)+1] = p.y;
                   }
@@ -78,13 +77,13 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadTopLeft initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.tl.x;
-                  values[1] = layer.outerQuadrilateral.tl.y;
+                  values[0] = layer.quadrilateral.tl.x;
+                  values[1] = layer.quadrilateral.tl.y;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.tl = CGPointMake(values[0], values[1]);
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -92,12 +91,12 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadTopLeftX initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.tl.x;
+                  values[0] = layer.quadrilateral.tl.x;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.tl.x = values[0];
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -105,12 +104,12 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadTopLeftY initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.tl.y;
+                  values[0] = layer.quadrilateral.tl.y;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.tl.y = values[0];
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -118,13 +117,13 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadTopRight initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.tr.x;
-                  values[1] = layer.outerQuadrilateral.tr.y;
+                  values[0] = layer.quadrilateral.tr.x;
+                  values[1] = layer.quadrilateral.tr.y;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.tr = CGPointMake(values[0], values[1]);
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -132,12 +131,12 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadTopRightX initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.tr.x;
+                  values[0] = layer.quadrilateral.tr.x;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.tr.x = values[0];
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -145,12 +144,12 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadTopRightY initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.tr.y;
+                  values[0] = layer.quadrilateral.tr.y;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.tr.y = values[0];
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -158,13 +157,13 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadBottomLeft initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.bl.x;
-                  values[1] = layer.outerQuadrilateral.bl.y;
+                  values[0] = layer.quadrilateral.bl.x;
+                  values[1] = layer.quadrilateral.bl.y;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.bl = CGPointMake(values[0], values[1]);
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -172,12 +171,12 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadBottomLeftX initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.bl.x;
+                  values[0] = layer.quadrilateral.bl.x;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.bl.x = values[0];
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -185,12 +184,12 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadBottomLeftY initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.bl.y;
+                  values[0] = layer.quadrilateral.bl.y;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.bl.y = values[0];
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -198,26 +197,26 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadBottomRight initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.br.x;
-                  values[1] = layer.outerQuadrilateral.br.y;
+                  values[0] = layer.quadrilateral.br.x;
+                  values[1] = layer.quadrilateral.br.y;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.br = CGPointMake(values[0], values[1]);
-                  layer.outerQuadrilateral = q;
-                  
+                  layer.quadrilateral = q;
+
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
           }],
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadBottomRightX initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.br.x;
+                  values[0] = layer.quadrilateral.br.x;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.br.x = values[0];
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
@@ -225,27 +224,27 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadBottomRightY initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  values[0] = layer.outerQuadrilateral.br.y;
+                  values[0] = layer.quadrilateral.br.y;
               };
               prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = layer.outerQuadrilateral;
+                  AGKQuad q = layer.quadrilateral;
                   q.br.y = values[0];
-                  layer.outerQuadrilateral = q;
+                  layer.quadrilateral = q;
 
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
           }],
-
+          
           ];
     }
-
+    
     return props;
 }
 
 + (instancetype)AGKPropertyWithName:(NSString *)aName
 {
     NSArray *props = [self AGKAnimatableProperties];
-
+    
     for(POPAnimatableProperty *prop in props)
     {
         if([prop.name isEqualToString:aName])
@@ -253,7 +252,7 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
             return prop;
         }
     }
-
+    
     return nil;
 }
 

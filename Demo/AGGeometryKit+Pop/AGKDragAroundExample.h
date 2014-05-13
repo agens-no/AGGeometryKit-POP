@@ -23,9 +23,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AGKAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
-
-@property (strong, nonatomic) IBOutlet UIWindow *window;
-@property (strong, nonatomic) IBOutlet UITabBarController *tabBarController;
+@interface AGKDragAroundExample : UIViewController
 
 @end

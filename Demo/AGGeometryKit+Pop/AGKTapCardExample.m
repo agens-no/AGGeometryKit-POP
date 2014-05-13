@@ -1,25 +1,40 @@
 //
-//  AGKFirstViewController.m
-//  AGGeometryKit+Pop
+// Author: Håvard Fossli <hfossli@agens.no>
 //
-//  Created by Håvard Fossli on 08.05.14.
-//  Copyright (c) 2014 Agens AS. All rights reserved.
+// Copyright (c) 2013 Agens AS (http://agens.no/)
 //
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
-#import "AGKFirstViewController.h"
+#import "AGKTapCardExample.h"
 #import <AGGeometryKit/AGGeometryKit.h>
 #import "POPAnimatableProperty+AGGeometryKit.h"
 #import <pop/POP.h>
 
 
-@interface AGKFirstViewController () <UIGestureRecognizerDelegate>
+@interface AGKTapCardExample () <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIView *imageView;
 
 @end
 
 
-@implementation AGKFirstViewController
+@implementation AGKTapCardExample
 
 - (void)viewDidLoad
 {
@@ -33,14 +48,12 @@
     UIImageView *view = (UIImageView *)[recognizer view];
     CGPoint pointOfTouchInside = [recognizer locationInView:view];
     CGPoint touchAnchor = CGPointClamp_AGK(CGPointConvertToAnchorPoint_AGK(pointOfTouchInside, view.bounds), 0.0, 1.0, 0.0, 1.0);
-
     AGKQuad desiredQuad = AGKQuadMakeWithCGRect((CGRect){view.layer.position, view.bounds.size});
-
-    CGFloat maxInsetX = 0.1;
-    CGFloat maxInsetY = 0.08;
 
     if(recognizer.state != UIGestureRecognizerStateEnded)
     {
+        const CGFloat maxInsetX = 0.1;
+        const CGFloat maxInsetY = 0.08;
         desiredQuad.tl.x = AGKInterpolate(desiredQuad.tl.x, desiredQuad.tr.x, AGKRemap(touchAnchor.x, 0.0, 1.0, maxInsetX, 0.03));
         desiredQuad.tl.y = AGKInterpolate(desiredQuad.tl.y, desiredQuad.bl.y, AGKRemap(touchAnchor.x, 0.0, 1.0, maxInsetY, 0.03));
         desiredQuad.tr.x = AGKInterpolate(desiredQuad.tr.x, desiredQuad.tl.x, AGKRemap(touchAnchor.x, 1.0, 0.0, maxInsetX, 0.03));

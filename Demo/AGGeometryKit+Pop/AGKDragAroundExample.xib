@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGKSecondViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGKDragAroundExample">
             <connections>
                 <outlet property="imageView" destination="w81-zR-r8S" id="eFB-JS-iVd"/>
                 <outlet property="segmentedControl" destination="Mbr-se-pdy" id="GB6-hU-LgV"/>
@@ -36,7 +36,7 @@
                     <segments>
                         <segment title="First"/>
                         <segment title="Second"/>
-                        <segment title="Third" enabled="NO"/>
+                        <segment title="Third"/>
                     </segments>
                 </segmentedControl>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="try other settings as well" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yO8-3K-lBC">

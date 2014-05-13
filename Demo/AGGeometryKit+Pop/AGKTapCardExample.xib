@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGKFirstViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGKTapCardExample">
             <connections>
                 <outlet property="imageView" destination="4qK-WL-FYI" id="w8s-1m-eBS"/>
                 <outlet property="view" destination="2" id="3"/>

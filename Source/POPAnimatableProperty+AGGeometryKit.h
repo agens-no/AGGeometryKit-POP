@@ -1,6 +1,5 @@
 //
 // Author: Håvard Fossli <hfossli@agens.no>
-// Author: https://github.com/kennytm
 //
 // Copyright (c) 2013 Agens AS (http://agens.no/)
 //

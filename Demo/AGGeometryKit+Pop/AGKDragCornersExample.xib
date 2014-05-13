@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGKQuadControlsSample">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGKDragCornersExample">
             <connections>
                 <outlet property="bottomLeftControl" destination="17" id="46"/>
                 <outlet property="bottomRightControl" destination="25" id="47"/>

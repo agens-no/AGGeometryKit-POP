@@ -9,19 +9,16 @@
 /* Begin PBXBuildFile section */
 		231781CBDDC74E14B29E5F8D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB448A401834AD389990A4B /* libPods.a */; };
 		A304375F191B8E2D00EB1145 /* AGGeometryKitApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = A304375E191B8E2D00EB1145 /* AGGeometryKitApplication.xib */; };
-		A3043761191B8EE000EB1145 /* tabbar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3043760191B8EE000EB1145 /* tabbar_icon.png */; };
-		A3043765191B8F2100EB1145 /* AGKQuadControlsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3043763191B8F2100EB1145 /* AGKQuadControlsSample.m */; };
-		A3043766191B8F2100EB1145 /* AGKQuadControlsSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3043764191B8F2100EB1145 /* AGKQuadControlsSample.xib */; };
-		A304376D191B8FBA00EB1145 /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A304376B191B8FBA00EB1145 /* controlpoint.png */; };
-		A304376E191B8FBA00EB1145 /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A304376C191B8FBA00EB1145 /* controlpoint_h.png */; };
+		A3043765191B8F2100EB1145 /* AGKDragCornersExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3043763191B8F2100EB1145 /* AGKDragCornersExample.m */; };
+		A3043766191B8F2100EB1145 /* AGKDragCornersExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3043764191B8F2100EB1145 /* AGKDragCornersExample.xib */; };
 		A3043771191BB5FA00EB1145 /* sample_image@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A304376F191BB5FA00EB1145 /* sample_image@2x.jpg */; };
 		A3043772191BB5FA00EB1145 /* sample_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043770191BB5FA00EB1145 /* sample_image.jpg */; };
 		A3043775191BBF3E00EB1145 /* Box_Closed.png in Resources */ = {isa = PBXBuildFile; fileRef = A3043773191BBF3E00EB1145 /* Box_Closed.png */; };
 		A3043776191BBF3E00EB1145 /* Box_Closed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3043774191BBF3E00EB1145 /* Box_Closed@2x.png */; };
-		A3043778191BBFD400EB1145 /* AGKFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3043777191BBFD400EB1145 /* AGKFirstViewController.xib */; };
+		A3043778191BBFD400EB1145 /* AGKTapCardExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3043777191BBFD400EB1145 /* AGKTapCardExample.xib */; };
 		A304377B191BC2E400EB1145 /* sample_image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043779191BC2E400EB1145 /* sample_image2.jpg */; };
 		A304377C191BC2E400EB1145 /* sample_image2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A304377A191BC2E400EB1145 /* sample_image2@2x.jpg */; };
-		A304377E191CB7D900EB1145 /* AGKSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A304377D191CB7D900EB1145 /* AGKSecondViewController.xib */; };
+		A304377E191CB7D900EB1145 /* AGKDragAroundExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = A304377D191CB7D900EB1145 /* AGKDragAroundExample.xib */; };
 		A3043781191CB8E700EB1145 /* sample_image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A304377F191CB8E700EB1145 /* sample_image3.jpg */; };
 		A3043782191CB8E700EB1145 /* sample_image3@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043780191CB8E700EB1145 /* sample_image3@2x.jpg */; };
 		A3043785191CB9C400EB1145 /* sample_image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043783191CB9C400EB1145 /* sample_image4.jpg */; };
@@ -32,8 +29,8 @@
 		A3D4C7F5191B876400DB2C8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D4C7F3191B876400DB2C8F /* InfoPlist.strings */; };
 		A3D4C7F7191B876400DB2C8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C7F6191B876400DB2C8F /* main.m */; };
 		A3D4C7FB191B876400DB2C8F /* AGKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C7FA191B876400DB2C8F /* AGKAppDelegate.m */; };
-		A3D4C804191B876400DB2C8F /* AGKFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C803191B876400DB2C8F /* AGKFirstViewController.m */; };
-		A3D4C807191B876400DB2C8F /* AGKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C806191B876400DB2C8F /* AGKSecondViewController.m */; };
+		A3D4C804191B876400DB2C8F /* AGKTapCardExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C803191B876400DB2C8F /* AGKTapCardExample.m */; };
+		A3D4C807191B876400DB2C8F /* AGKDragAroundExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C806191B876400DB2C8F /* AGKDragAroundExample.m */; };
 		A3D4C809191B876400DB2C8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3D4C808191B876400DB2C8F /* Images.xcassets */; };
 		A3D4C810191B876400DB2C8F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C80F191B876400DB2C8F /* XCTest.framework */; };
 		A3D4C811191B876400DB2C8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C7EA191B876400DB2C8F /* Foundation.framework */; };
@@ -43,6 +40,10 @@
 		A3D4C828191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4C827191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.m */; };
 		A3E67AF01920B6A300A4CD4A /* sample_image5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AEE1920B6A300A4CD4A /* sample_image5.jpg */; };
 		A3E67AF11920B6A300A4CD4A /* sample_image5@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3E67AEF1920B6A300A4CD4A /* sample_image5@2x.jpg */; };
+		A3E67B0A192219D900A4CD4A /* controlpoint_h.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B06192219D900A4CD4A /* controlpoint_h.png */; };
+		A3E67B0B192219D900A4CD4A /* controlpoint_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B07192219D900A4CD4A /* controlpoint_h@2x.png */; };
+		A3E67B0C192219D900A4CD4A /* controlpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B08192219D900A4CD4A /* controlpoint.png */; };
+		A3E67B0D192219D900A4CD4A /* controlpoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3E67B09192219D900A4CD4A /* controlpoint@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,20 +59,17 @@
 /* Begin PBXFileReference section */
 		3BB448A401834AD389990A4B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A304375E191B8E2D00EB1145 /* AGGeometryKitApplication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGGeometryKitApplication.xib; sourceTree = "<group>"; };
-		A3043760191B8EE000EB1145 /* tabbar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_icon.png; sourceTree = "<group>"; };
-		A3043762191B8F2100EB1145 /* AGKQuadControlsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKQuadControlsSample.h; sourceTree = "<group>"; };
-		A3043763191B8F2100EB1145 /* AGKQuadControlsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKQuadControlsSample.m; sourceTree = "<group>"; };
-		A3043764191B8F2100EB1145 /* AGKQuadControlsSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKQuadControlsSample.xib; sourceTree = "<group>"; };
-		A304376B191B8FBA00EB1145 /* controlpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint.png; sourceTree = "<group>"; };
-		A304376C191B8FBA00EB1145 /* controlpoint_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint_h.png; sourceTree = "<group>"; };
+		A3043762191B8F2100EB1145 /* AGKDragCornersExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKDragCornersExample.h; sourceTree = "<group>"; };
+		A3043763191B8F2100EB1145 /* AGKDragCornersExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKDragCornersExample.m; sourceTree = "<group>"; };
+		A3043764191B8F2100EB1145 /* AGKDragCornersExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKDragCornersExample.xib; sourceTree = "<group>"; };
 		A304376F191BB5FA00EB1145 /* sample_image@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image@2x.jpg"; sourceTree = "<group>"; };
 		A3043770191BB5FA00EB1145 /* sample_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image.jpg; sourceTree = "<group>"; };
 		A3043773191BBF3E00EB1145 /* Box_Closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Box_Closed.png; sourceTree = "<group>"; };
 		A3043774191BBF3E00EB1145 /* Box_Closed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Box_Closed@2x.png"; sourceTree = "<group>"; };
-		A3043777191BBFD400EB1145 /* AGKFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKFirstViewController.xib; sourceTree = "<group>"; };
+		A3043777191BBFD400EB1145 /* AGKTapCardExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKTapCardExample.xib; sourceTree = "<group>"; };
 		A3043779191BC2E400EB1145 /* sample_image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image2.jpg; sourceTree = "<group>"; };
 		A304377A191BC2E400EB1145 /* sample_image2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image2@2x.jpg"; sourceTree = "<group>"; };
-		A304377D191CB7D900EB1145 /* AGKSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKSecondViewController.xib; sourceTree = "<group>"; };
+		A304377D191CB7D900EB1145 /* AGKDragAroundExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGKDragAroundExample.xib; sourceTree = "<group>"; };
 		A304377F191CB8E700EB1145 /* sample_image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image3.jpg; sourceTree = "<group>"; };
 		A3043780191CB8E700EB1145 /* sample_image3@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image3@2x.jpg"; sourceTree = "<group>"; };
 		A3043783191CB9C400EB1145 /* sample_image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image4.jpg; sourceTree = "<group>"; };
@@ -86,10 +84,10 @@
 		A3D4C7F8191B876400DB2C8F /* AGGeometryKit+Pop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AGGeometryKit+Pop-Prefix.pch"; sourceTree = "<group>"; };
 		A3D4C7F9191B876400DB2C8F /* AGKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGKAppDelegate.h; sourceTree = "<group>"; };
 		A3D4C7FA191B876400DB2C8F /* AGKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGKAppDelegate.m; sourceTree = "<group>"; };
-		A3D4C802191B876400DB2C8F /* AGKFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGKFirstViewController.h; sourceTree = "<group>"; };
-		A3D4C803191B876400DB2C8F /* AGKFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGKFirstViewController.m; sourceTree = "<group>"; };
-		A3D4C805191B876400DB2C8F /* AGKSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGKSecondViewController.h; sourceTree = "<group>"; };
-		A3D4C806191B876400DB2C8F /* AGKSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGKSecondViewController.m; sourceTree = "<group>"; };
+		A3D4C802191B876400DB2C8F /* AGKTapCardExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGKTapCardExample.h; sourceTree = "<group>"; };
+		A3D4C803191B876400DB2C8F /* AGKTapCardExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGKTapCardExample.m; sourceTree = "<group>"; };
+		A3D4C805191B876400DB2C8F /* AGKDragAroundExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGKDragAroundExample.h; sourceTree = "<group>"; };
+		A3D4C806191B876400DB2C8F /* AGKDragAroundExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGKDragAroundExample.m; sourceTree = "<group>"; };
 		A3D4C808191B876400DB2C8F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A3D4C80E191B876400DB2C8F /* AGGeometryKit+PopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AGGeometryKit+PopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D4C80F191B876400DB2C8F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -100,6 +98,10 @@
 		A3D4C827191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "POPAnimatableProperty+AGGeometryKit.m"; sourceTree = "<group>"; };
 		A3E67AEE1920B6A300A4CD4A /* sample_image5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image5.jpg; sourceTree = "<group>"; };
 		A3E67AEF1920B6A300A4CD4A /* sample_image5@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image5@2x.jpg"; sourceTree = "<group>"; };
+		A3E67B06192219D900A4CD4A /* controlpoint_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint_h.png; sourceTree = "<group>"; };
+		A3E67B07192219D900A4CD4A /* controlpoint_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint_h@2x.png"; sourceTree = "<group>"; };
+		A3E67B08192219D900A4CD4A /* controlpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlpoint.png; sourceTree = "<group>"; };
+		A3E67B09192219D900A4CD4A /* controlpoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "controlpoint@2x.png"; sourceTree = "<group>"; };
 		DCD9FE95B13A451FA0718F04 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,16 +169,15 @@
 				A3D4C7F9191B876400DB2C8F /* AGKAppDelegate.h */,
 				A3D4C7FA191B876400DB2C8F /* AGKAppDelegate.m */,
 				A304375E191B8E2D00EB1145 /* AGGeometryKitApplication.xib */,
-				A3D4C802191B876400DB2C8F /* AGKFirstViewController.h */,
-				A3D4C803191B876400DB2C8F /* AGKFirstViewController.m */,
-				A3043777191BBFD400EB1145 /* AGKFirstViewController.xib */,
-				A3D4C805191B876400DB2C8F /* AGKSecondViewController.h */,
-				A3D4C806191B876400DB2C8F /* AGKSecondViewController.m */,
-				A304377D191CB7D900EB1145 /* AGKSecondViewController.xib */,
-				A3043762191B8F2100EB1145 /* AGKQuadControlsSample.h */,
-				A3043763191B8F2100EB1145 /* AGKQuadControlsSample.m */,
-				A3043764191B8F2100EB1145 /* AGKQuadControlsSample.xib */,
-				A3043760191B8EE000EB1145 /* tabbar_icon.png */,
+				A3043762191B8F2100EB1145 /* AGKDragCornersExample.h */,
+				A3043763191B8F2100EB1145 /* AGKDragCornersExample.m */,
+				A3043764191B8F2100EB1145 /* AGKDragCornersExample.xib */,
+				A3D4C805191B876400DB2C8F /* AGKDragAroundExample.h */,
+				A3D4C806191B876400DB2C8F /* AGKDragAroundExample.m */,
+				A304377D191CB7D900EB1145 /* AGKDragAroundExample.xib */,
+				A3D4C802191B876400DB2C8F /* AGKTapCardExample.h */,
+				A3D4C803191B876400DB2C8F /* AGKTapCardExample.m */,
+				A3043777191BBFD400EB1145 /* AGKTapCardExample.xib */,
 				A3043770191BB5FA00EB1145 /* sample_image.jpg */,
 				A304376F191BB5FA00EB1145 /* sample_image@2x.jpg */,
 				A3043779191BC2E400EB1145 /* sample_image2.jpg */,
@@ -187,10 +188,12 @@
 				A3043784191CB9C400EB1145 /* sample_image4@2x.jpg */,
 				A3E67AEE1920B6A300A4CD4A /* sample_image5.jpg */,
 				A3E67AEF1920B6A300A4CD4A /* sample_image5@2x.jpg */,
-				A304376B191B8FBA00EB1145 /* controlpoint.png */,
-				A304376C191B8FBA00EB1145 /* controlpoint_h.png */,
 				A3043773191BBF3E00EB1145 /* Box_Closed.png */,
 				A3043774191BBF3E00EB1145 /* Box_Closed@2x.png */,
+				A3E67B06192219D900A4CD4A /* controlpoint_h.png */,
+				A3E67B07192219D900A4CD4A /* controlpoint_h@2x.png */,
+				A3E67B08192219D900A4CD4A /* controlpoint.png */,
+				A3E67B09192219D900A4CD4A /* controlpoint@2x.png */,
 				A3D4C808191B876400DB2C8F /* Images.xcassets */,
 				A3D4C7F1191B876400DB2C8F /* Supporting Files */,
 			);
@@ -315,27 +318,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E67B0B192219D900A4CD4A /* controlpoint_h@2x.png in Resources */,
 				A3043771191BB5FA00EB1145 /* sample_image@2x.jpg in Resources */,
 				A3043782191CB8E700EB1145 /* sample_image3@2x.jpg in Resources */,
 				A304377B191BC2E400EB1145 /* sample_image2.jpg in Resources */,
 				A3D4C809191B876400DB2C8F /* Images.xcassets in Resources */,
-				A304376E191B8FBA00EB1145 /* controlpoint_h.png in Resources */,
 				A304375F191B8E2D00EB1145 /* AGGeometryKitApplication.xib in Resources */,
 				A3043785191CB9C400EB1145 /* sample_image4.jpg in Resources */,
-				A3043766191B8F2100EB1145 /* AGKQuadControlsSample.xib in Resources */,
-				A3043778191BBFD400EB1145 /* AGKFirstViewController.xib in Resources */,
+				A3043766191B8F2100EB1145 /* AGKDragCornersExample.xib in Resources */,
+				A3043778191BBFD400EB1145 /* AGKTapCardExample.xib in Resources */,
 				A3E67AF01920B6A300A4CD4A /* sample_image5.jpg in Resources */,
 				A3043781191CB8E700EB1145 /* sample_image3.jpg in Resources */,
+				A3E67B0A192219D900A4CD4A /* controlpoint_h.png in Resources */,
 				A3E67AF11920B6A300A4CD4A /* sample_image5@2x.jpg in Resources */,
 				A304377C191BC2E400EB1145 /* sample_image2@2x.jpg in Resources */,
 				A3043786191CB9C400EB1145 /* sample_image4@2x.jpg in Resources */,
 				A3043772191BB5FA00EB1145 /* sample_image.jpg in Resources */,
-				A3043761191B8EE000EB1145 /* tabbar_icon.png in Resources */,
-				A304376D191B8FBA00EB1145 /* controlpoint.png in Resources */,
 				A3D4C7F5191B876400DB2C8F /* InfoPlist.strings in Resources */,
+				A3E67B0D192219D900A4CD4A /* controlpoint@2x.png in Resources */,
+				A3E67B0C192219D900A4CD4A /* controlpoint.png in Resources */,
 				A3043776191BBF3E00EB1145 /* Box_Closed@2x.png in Resources */,
 				A3043775191BBF3E00EB1145 /* Box_Closed.png in Resources */,
-				A304377E191CB7D900EB1145 /* AGKSecondViewController.xib in Resources */,
+				A304377E191CB7D900EB1145 /* AGKDragAroundExample.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,11 +391,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3D4C804191B876400DB2C8F /* AGKFirstViewController.m in Sources */,
+				A3D4C804191B876400DB2C8F /* AGKTapCardExample.m in Sources */,
 				A3D4C7FB191B876400DB2C8F /* AGKAppDelegate.m in Sources */,
-				A3D4C807191B876400DB2C8F /* AGKSecondViewController.m in Sources */,
+				A3D4C807191B876400DB2C8F /* AGKDragAroundExample.m in Sources */,
 				A3D4C828191B887000DB2C8F /* POPAnimatableProperty+AGGeometryKit.m in Sources */,
-				A3043765191B8F2100EB1145 /* AGKQuadControlsSample.m in Sources */,
+				A3043765191B8F2100EB1145 /* AGKDragCornersExample.m in Sources */,
 				A3D4C7F7191B876400DB2C8F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

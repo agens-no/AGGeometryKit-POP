@@ -21,7 +21,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AGKQuadControlsSample.h"
+#import "AGKDragCornersExample.h"
 #import "AGKQuad.h"
 #import "CALayer+AGKQuad.h"
 #import "CALayer+AGK+Methods.h"
@@ -34,7 +34,7 @@
 
 @end
 
-@interface AGKQuadControlsSample ()
+@interface AGKDragCornersExample ()
 
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) IBOutlet UIView *topLeftControl;
@@ -45,7 +45,7 @@
 @end
 
 
-@implementation AGKQuadControlsSample
+@implementation AGKDragCornersExample
 
 - (void)viewDidLoad
 {
@@ -53,7 +53,7 @@
 
     [self.imageView.layer ensureAnchorPointIsSetToZero];
 
-    self.imageView.layer.outerQuadrilateral = AGKQuadMake(self.topLeftControl.center,
+    self.imageView.layer.quadrilateral = AGKQuadMake(self.topLeftControl.center,
                                                           self.topRightControl.center,
                                                           self.bottomRightControl.center,
                                                           self.bottomLeftControl.center);

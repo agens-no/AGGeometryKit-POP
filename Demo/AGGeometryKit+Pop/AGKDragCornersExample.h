@@ -21,11 +21,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface AGKAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
-
-@property (strong, nonatomic) IBOutlet UIWindow *window;
-@property (strong, nonatomic) IBOutlet UITabBarController *tabBarController;
+@interface AGKDragCornersExample : UIViewController
 
 @end
