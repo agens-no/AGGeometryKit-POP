@@ -22,11 +22,7 @@
 // THE SOFTWARE.
 
 #import "AGKDragCornersExample.h"
-#import "AGKQuad.h"
-#import "CALayer+AGKQuad.h"
-#import "CALayer+AGK+Methods.h"
-#import "UIView+AGK+Properties.h"
-#import "UIBezierPath+AGKQuad.h"
+#import "AGGeometryKit.h"
 #import "POPAnimatableProperty+AGGeometryKit.h"
 #import <pop/POP.h>
 
@@ -54,23 +50,25 @@
     [self.imageView.layer ensureAnchorPointIsSetToZero];
 
     self.imageView.layer.quadrilateral = AGKQuadMake(self.topLeftControl.center,
-                                                          self.topRightControl.center,
-                                                          self.bottomRightControl.center,
-                                                          self.bottomLeftControl.center);
+                                                     self.topRightControl.center,
+                                                     self.bottomRightControl.center,
+                                                     self.bottomLeftControl.center);
 }
 
 - (void)panGestureChanged:(UIPanGestureRecognizer *)recognizer propertyName:(NSString *)propertyName
 {
-    UIImageView *view = (UIImageView *)[recognizer view];
-    CGPoint velocity = [recognizer velocityInView:self.view];
+    UIImageView *controlPointView = (UIImageView *)[recognizer view];
     CGPoint translation = [recognizer translationInView:self.view];
 
+    // Highlight the controlpoint
+    controlPointView.highlighted = recognizer.state == UIGestureRecognizerStateChanged;
+
     // Move control point
-    view.centerX += translation.x;
-    view.centerY += translation.y;
+    controlPointView.centerX += translation.x;
+    controlPointView.centerY += translation.y;
     [recognizer setTranslation:CGPointZero inView:self.view];
 
-    // Animate quadrilateral for imageview
+    // Animate
     POPSpringAnimation *anim = [self.imageView.layer pop_animationForKey:propertyName];
 
     if(anim == nil)
@@ -80,14 +78,11 @@
         [self.imageView.layer pop_addAnimation:anim forKey:propertyName];
     }
 
-    anim.velocity = [NSValue valueWithCGPoint:velocity];
-    anim.toValue = [NSValue valueWithCGPoint:view.center];
-
+    anim.velocity = [NSValue valueWithCGPoint:[recognizer velocityInView:self.view]];
+    anim.toValue = [NSValue valueWithCGPoint:controlPointView.center];
     anim.springBounciness = 1;
     anim.springSpeed = 7;
     anim.dynamicsFriction = 7;
-
-    view.highlighted = recognizer.state != UIGestureRecognizerStateEnded;
 }
 
 - (IBAction)topLeftChanged:(UIPanGestureRecognizer *)recognizer
