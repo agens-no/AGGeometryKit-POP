@@ -230,7 +230,6 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
                   AGKQuad q = layer.quadrilateral;
                   q.br.y = values[0];
                   layer.quadrilateral = q;
-
               };
               prop.threshold = kPOPLayerAGKQuadThreshold;
           }],

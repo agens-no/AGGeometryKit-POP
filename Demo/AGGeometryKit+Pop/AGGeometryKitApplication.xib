@@ -33,7 +33,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <nil key="simulatedDestinationMetrics"/>
-            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="11" id="8">
+            <tabBar key="tabBar" contentMode="scaleToFill" id="8">
                 <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
