@@ -23,8 +23,6 @@
 
 #import <POP/POP.h>
 
-extern NSString * const kPOPLayerAGKQuad;
-
 extern NSString * const kPOPLayerAGKQuadTopLeft;
 extern NSString * const kPOPLayerAGKQuadTopLeftX;
 extern NSString * const kPOPLayerAGKQuadTopLeftY;

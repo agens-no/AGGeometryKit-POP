@@ -26,8 +26,6 @@
 
 static CGFloat const kPOPLayerAGKQuadThreshold = 1.0;
 
-NSString * const kPOPLayerAGKQuad = @"quadrilateral";
-
 NSString * const kPOPLayerAGKQuadTopLeft = @"quadrilateral.tl";
 NSString * const kPOPLayerAGKQuadTopLeftX = @"quadrilateral.tl.x";
 NSString * const kPOPLayerAGKQuadTopLeftY = @"quadrilateral.tl.y";
@@ -54,26 +52,6 @@ NSString * const kPOPLayerAGKQuadBottomRightY = @"quadrilateral.br.y";
     {
         props =
         @[
-          [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuad initializer:^(POPMutableAnimatableProperty *prop) {
-              prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
-                  for(int i = 0; i < 4; i++)
-                  {
-                      CGPoint p = layer.quadrilateral.v[i];
-                      values[(i*2)] = p.x;
-                      values[(i*2)+1] = p.y;
-                  }
-              };
-              prop.writeBlock = ^(CALayer *layer, const CGFloat values[]) {
-                  AGKQuad q = AGKQuadZero;
-                  for(int i = 0; i < 4; i++)
-                  {
-                      CGPoint p = CGPointMake(values[(i*2)], values[(i*2)+1]);
-                      q.v[i] = p;
-                  }
-
-              };
-              prop.threshold = kPOPLayerAGKQuadThreshold;
-          }],
 
           [POPAnimatableProperty propertyWithName:kPOPLayerAGKQuadTopLeft initializer:^(POPMutableAnimatableProperty *prop) {
               prop.readBlock = ^(CALayer *layer, CGFloat values[]) {
