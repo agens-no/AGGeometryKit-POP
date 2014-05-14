@@ -10,6 +10,15 @@ Old-school: Grab the files found in `Source`.
 
 
 
+
+## Demo
+
+#!!! LINK TO AGGEOMETRYKIT+POP MISSING !!!
+#!!! VIDEO MISSING !!!
+
+
+
+
 ## Interface
 
 Animate each corner independently using these new POPAnimatableProperty's.
@@ -35,14 +44,6 @@ Animate each corner independently using these new POPAnimatableProperty's.
     + (instancetype)AGKPropertyWithName:(NSString *)aName;
 
     @end
-
-
-
-
-## Demo
-
-#!!! LINK TO AGGEOMETRYKIT+POP MISSING !!!
-#!!! VIDEO MISSING !!!
 
 
 
