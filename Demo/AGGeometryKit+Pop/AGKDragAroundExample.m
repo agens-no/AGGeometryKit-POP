@@ -78,37 +78,30 @@
     {
         case 0:
             [self panGestureChanged:recognizer animationTuning:^(POPSpringAnimation *anim, int cornerIndex, CGFloat dragCoefficient) {
-                anim.springBounciness   = AGKInterpolate(0, 10, dragCoefficient);
                 anim.dynamicsMass       = 1;
                 anim.dynamicsFriction   = 37;
-                anim.dynamicsTension    = 350;
-                anim.springSpeed        = AGKInterpolate(4, 20, dragCoefficient);
-            }];
-        case 1:
-            [self panGestureChanged:recognizer animationTuning:^(POPSpringAnimation *anim, int cornerIndex, CGFloat dragCoefficient) {
-                anim.springBounciness   = 4;
-                anim.springSpeed        = 20;
-                anim.dynamicsMass       = 1;
-                anim.dynamicsFriction   = 37;
-                anim.dynamicsTension    = AGKInterpolate(230, 400, dragCoefficient);
+                anim.dynamicsTension    = 2;
+                anim.springBounciness   = AGKInterpolate(4, 12, dragCoefficient);
+                anim.springSpeed        = AGKInterpolate(10, 50, dragCoefficient);
             }];
             break;
-        case 2:
+        case 1:
             [self panGestureChanged:recognizer animationTuning:^(POPSpringAnimation *anim, int cornerIndex, CGFloat dragCoefficient) {
-                anim.springBounciness   = AGKInterpolate(10, 20, dragCoefficient);
                 anim.dynamicsMass       = 100;
                 anim.dynamicsFriction   = 37;
                 anim.dynamicsTension    = 2;
+                anim.springBounciness   = AGKInterpolate(10, 20, dragCoefficient);
                 anim.springSpeed        = AGKInterpolate(10, 20, dragCoefficient);
             }];
             break;
+        case 2:
         default:
             [self panGestureChanged:recognizer animationTuning:^(POPSpringAnimation *anim, int cornerIndex, CGFloat dragCoefficient) {
-                anim.springBounciness   = AGKInterpolate(0, 10, dragCoefficient);
-                anim.dynamicsMass       = AGKInterpolate(1, 1, dragCoefficient);
-                anim.dynamicsFriction   = AGKInterpolate(37, 37, dragCoefficient);
-                anim.dynamicsTension    = AGKInterpolate(350, 350, dragCoefficient);
-                anim.springSpeed        = AGKInterpolate(4, 20, dragCoefficient);
+                anim.dynamicsMass       = 100;
+                anim.dynamicsFriction   = 37;
+                anim.dynamicsTension    = 2;
+                anim.springBounciness   = AGKInterpolate(5, 12, dragCoefficient);
+                anim.springSpeed        = AGKInterpolate(4, 7, dragCoefficient);
             }];
             break;
     }
