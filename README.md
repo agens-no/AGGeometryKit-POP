@@ -13,9 +13,8 @@ Old-school: Grab the files found in `Source`.
 
 ## Demo
 
-#!!! LINK TO AGGEOMETRYKIT+POP MISSING !!!
-#!!! VIDEO MISSING !!!
-
+Test
+VM("http://vimeo.com/54007714", print = TRUE)
 
 
 
