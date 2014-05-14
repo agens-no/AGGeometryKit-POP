@@ -23,6 +23,7 @@
 		A3043782191CB8E700EB1145 /* sample_image3@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043780191CB8E700EB1145 /* sample_image3@2x.jpg */; };
 		A3043785191CB9C400EB1145 /* sample_image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043783191CB9C400EB1145 /* sample_image4.jpg */; };
 		A3043786191CB9C400EB1145 /* sample_image4@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3043784191CB9C400EB1145 /* sample_image4@2x.jpg */; };
+		A31F587C19238B220041DB93 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A31F587B19238B220041DB93 /* README.md */; };
 		A3D4C7EB191B876400DB2C8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C7EA191B876400DB2C8F /* Foundation.framework */; };
 		A3D4C7ED191B876400DB2C8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C7EC191B876400DB2C8F /* CoreGraphics.framework */; };
 		A3D4C7EF191B876400DB2C8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D4C7EE191B876400DB2C8F /* UIKit.framework */; };
@@ -74,7 +75,8 @@
 		A3043780191CB8E700EB1145 /* sample_image3@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image3@2x.jpg"; sourceTree = "<group>"; };
 		A3043783191CB9C400EB1145 /* sample_image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image4.jpg; sourceTree = "<group>"; };
 		A3043784191CB9C400EB1145 /* sample_image4@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sample_image4@2x.jpg"; sourceTree = "<group>"; };
-		A3D4C7E7191B876400DB2C8F /* AGGeometryKit+Pop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AGGeometryKit+Pop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A31F587B19238B220041DB93 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		A3D4C7E7191B876400DB2C8F /* AGK+POP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AGK+POP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D4C7EA191B876400DB2C8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A3D4C7EC191B876400DB2C8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A3D4C7EE191B876400DB2C8F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -145,7 +147,7 @@
 		A3D4C7E8191B876400DB2C8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A3D4C7E7191B876400DB2C8F /* AGGeometryKit+Pop.app */,
+				A3D4C7E7191B876400DB2C8F /* AGK+POP.app */,
 				A3D4C80E191B876400DB2C8F /* AGGeometryKit+PopTests.xctest */,
 			);
 			name = Products;
@@ -194,6 +196,7 @@
 				A3E67B07192219D900A4CD4A /* controlpoint_h@2x.png */,
 				A3E67B08192219D900A4CD4A /* controlpoint.png */,
 				A3E67B09192219D900A4CD4A /* controlpoint@2x.png */,
+				A31F587B19238B220041DB93 /* README.md */,
 				A3D4C808191B876400DB2C8F /* Images.xcassets */,
 				A3D4C7F1191B876400DB2C8F /* Supporting Files */,
 			);
@@ -258,7 +261,7 @@
 			);
 			name = "AGGeometryKit+Pop";
 			productName = "AGGeometryKit+Pop";
-			productReference = A3D4C7E7191B876400DB2C8F /* AGGeometryKit+Pop.app */;
+			productReference = A3D4C7E7191B876400DB2C8F /* AGK+POP.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A3D4C80D191B876400DB2C8F /* AGGeometryKit+PopTests */ = {
@@ -326,6 +329,7 @@
 				A304375F191B8E2D00EB1145 /* AGGeometryKitApplication.xib in Resources */,
 				A3043785191CB9C400EB1145 /* sample_image4.jpg in Resources */,
 				A3043766191B8F2100EB1145 /* AGKDragCornersExample.xib in Resources */,
+				A31F587C19238B220041DB93 /* README.md in Resources */,
 				A3043778191BBFD400EB1145 /* AGKTapCardExample.xib in Resources */,
 				A3E67AF01920B6A300A4CD4A /* sample_image5.jpg in Resources */,
 				A3043781191CB8E700EB1145 /* sample_image3.jpg in Resources */,
@@ -470,7 +474,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -519,7 +523,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGGeometryKit+Pop/AGGeometryKit+Pop-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit+Pop/AGGeometryKit+Pop-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "AGK+POP";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -534,7 +538,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AGGeometryKit+Pop/AGGeometryKit+Pop-Prefix.pch";
 				INFOPLIST_FILE = "AGGeometryKit+Pop/AGGeometryKit+Pop-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "AGK+POP";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
