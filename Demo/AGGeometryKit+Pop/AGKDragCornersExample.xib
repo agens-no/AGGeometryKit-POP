@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
@@ -20,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="sample_image.jpg" id="6">
-                    <rect key="frame" x="0.0" y="0.0" width="904" height="570"/>
+                    <rect key="frame" x="66" y="80" width="904" height="570"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drag corners" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P33-MX-FcV">
@@ -30,32 +31,32 @@
                     <color key="textColor" red="0.20051332853025938" green="0.20051332853025938" blue="0.20051332853025938" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView contentMode="TopLeft" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="23" userLabel="Top Left">
-                    <rect key="frame" x="45" y="60" width="46" height="46"/>
+                <imageView contentMode="center" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="23" userLabel="Top Left">
+                    <rect key="frame" x="33" y="48" width="71" height="71"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="18" appends="YES" id="42"/>
                     </connections>
                 </imageView>
-                <imageView contentMode="TopLeft" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="24" userLabel="Top Right">
-                    <rect key="frame" x="943" y="60" width="46" height="46"/>
+                <imageView contentMode="center" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="24" userLabel="Top Right">
+                    <rect key="frame" x="931" y="48" width="71" height="71"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="28" appends="YES" id="43"/>
                     </connections>
                 </imageView>
-                <imageView contentMode="TopLeft" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="17" userLabel="Bottom Left">
-                    <rect key="frame" x="45" y="620" width="46" height="46"/>
+                <imageView contentMode="center" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="17" userLabel="Bottom Left">
+                    <rect key="frame" x="33" y="608" width="71" height="71"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="30" appends="YES" id="40"/>
                     </connections>
                 </imageView>
-                <imageView contentMode="TopLeft" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="25" userLabel="Bottom Right">
-                    <rect key="frame" x="943" y="620" width="46" height="46"/>
+                <imageView contentMode="center" image="controlpoint.png" highlightedImage="controlpoint_h.png" id="25" userLabel="Bottom Right">
+                    <rect key="frame" x="931" y="608" width="71" height="71"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
                     <connections>
