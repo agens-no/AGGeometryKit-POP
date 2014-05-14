@@ -1,4 +1,4 @@
-![AGGeometryKit](/logo.png?raw=true "AGGeometryKit")
+![AGGeometryKit](/logo.png?raw=true "AGGeometryKit") 
 
 ![POP](https://github.com/facebook/pop/blob/master/Images/pop.gif?raw=true  "POP")  
 
