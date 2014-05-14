@@ -13,9 +13,6 @@ Old-school: Grab the files found in `Source`.
 
 ## Demo
 
-Test
-VM("http://vimeo.com/54007714", print = TRUE)
-
 
 
 ## Interface
