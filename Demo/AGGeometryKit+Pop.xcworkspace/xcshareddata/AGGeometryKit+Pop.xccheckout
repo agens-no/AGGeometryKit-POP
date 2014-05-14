@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>16226CCC-478C-4104-85B5-AFAD3ED21C0D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AGGeometryKit+Pop</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>20614EF7-6A84-44AF-86F8-B9CC939BED35</key>
+		<string>ssh://github.com/facebook/pop.git</string>
+		<key>2935368C-73D7-450E-A12C-949D44092F85</key>
+		<string>ssh://github.com/hfossli/AGGeometryKit-Pop.git</string>
+		<key>49F42943-BB0D-487F-8BAF-F19C256E4922</key>
+		<string>ssh://github.com/hfossli/AGGeometryKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Demo/AGGeometryKit+Pop.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>20614EF7-6A84-44AF-86F8-B9CC939BED35</key>
+		<string>../../../POP</string>
+		<key>2935368C-73D7-450E-A12C-949D44092F85</key>
+		<string>../..</string>
+		<key>49F42943-BB0D-487F-8BAF-F19C256E4922</key>
+		<string>../../../AGGeometryKit</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/hfossli/AGGeometryKit-Pop.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2935368C-73D7-450E-A12C-949D44092F85</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>49F42943-BB0D-487F-8BAF-F19C256E4922</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AGGeometryKit</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2935368C-73D7-450E-A12C-949D44092F85</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AGGeometryKit+Pop</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>20614EF7-6A84-44AF-86F8-B9CC939BED35</string>
+			<key>IDESourceControlWCCName</key>
+			<string>POP</string>
+		</dict>
+	</array>
+</dict>
+</plist>
