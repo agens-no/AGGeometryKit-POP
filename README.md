@@ -5,7 +5,7 @@ Bridging [AGGeometryKit](https://github.com/hfossli/AGGeometryKit) with [POP](ht
 
 ### Installation
 
-New-school: Use the cocoa pod named `AGGeometryKit+POP`.
+New-school: Use the cocoa pod named `AGGeometryKit+POP`.  
 Old-school: Grab the files found in `Source`.
 
 
