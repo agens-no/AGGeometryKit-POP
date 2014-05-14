@@ -1,8 +1,5 @@
 ![AGGeometryKit](/logo.png?raw=true "AGGeometryKit") 
 
-![POP](https://github.com/facebook/pop/blob/master/Images/pop.gif?raw=true  "POP")  
-
-
 Bridging [AGGeometryKit](https://github.com/hfossli/AGGeometryKit) with [POP](https://github.com/facebook/pop) for amazing dynamics and animations.
 
 
