@@ -13,9 +13,8 @@ Old-school: Grab the files found in `Source`.
 
 ## Demo
 
-Tap to open in vimeo
-
-[![Demo video](https://i.vimeocdn.com/video/475306176_800.jpg)](https://vimeo.com/95383807)
+[![Demo video](https://i.vimeocdn.com/video/475306176_800.jpg)](https://vimeo.com/95383807)   
+[See the video on vimeo ](https://vimeo.com/95383807)
 
 ## Interface
 
