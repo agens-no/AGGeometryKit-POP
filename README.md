@@ -2,6 +2,8 @@
 
 Bridging [AGGeometryKit](https://github.com/hfossli/AGGeometryKit) with [POP](https://github.com/facebook/pop) for amazing dynamics and animations.
 
+See [this interesting video](https://vimeo.com/93206523) about animation principles by Cento Lodigiani. If you like what you see and want to mimic step #1 and #5 - then this kit is here to help you.
+
 
 ### Installation
 
