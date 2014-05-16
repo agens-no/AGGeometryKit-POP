@@ -1,4 +1,4 @@
 platform :ios, '6.0'
 
-pod 'AGGeometryKit', :path => '../../AGGeometryKit/AGGeometryKit.podspec'
-pod 'pop', :path => '../../POP/pop.podspec'
+pod 'pop', '~> 1.0.4'
+pod 'AGGeometryKit', '~> 1.0.1'
