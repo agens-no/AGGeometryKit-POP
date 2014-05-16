@@ -7,7 +7,9 @@ See [this interesting video](https://vimeo.com/93206523) about animation princip
 
 ### Installation
 
-New-school: Use the cocoa pod named `AGGeometryKit+POP`.  
+New-school: Use the cocoa pod named `AGGeometryKit+POP`.   
+PS: It is currently not live yet: https://github.com/CocoaPods/Specs/pull/11897
+
 Old-school: Grab the files found in `Source`.
 
 
