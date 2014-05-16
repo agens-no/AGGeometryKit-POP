@@ -59,6 +59,10 @@ Convex quadrilateral, simple quadrilateral, tangential, kite, rhombus, square, t
 
 
 
+## Contact
+
+You can reach me on twitter as [@hfossli](https://twitter.com/hfossli). 
+
 
 ## Who's behind this?
 
