@@ -8,8 +8,6 @@ See [this interesting video](https://vimeo.com/93206523) about animation princip
 ### Installation
 
 New-school: Use the cocoa pod named `AGGeometryKit+POP`.   
-PS: It is currently not live yet: https://github.com/CocoaPods/Specs/pull/11897
-
 Old-school: Grab the files found in `Source`.
 
 
@@ -58,7 +56,7 @@ Convex quadrilateral, simple quadrilateral, tangential, kite, rhombus, square, t
 
 ## Who's behind this?
 
-Agens.no a company situated in Oslo, Norway with some help from some very clever stackoverflow.com guys.
+Agens.no a company situated in Oslo, Norway, with some help from some very clever stackoverflow.com guys.
 
 
 [![Agens | Digital craftsmanship](http://static.agens.no/images/agens_logo_w_slogan_avenir_small.png)](http://agens.no/)
