@@ -5,6 +5,9 @@ Bridging [AGGeometryKit](https://github.com/hfossli/AGGeometryKit) with [POP](ht
 See [this interesting video](https://vimeo.com/93206523) about animation principles by Cento Lodigiani. If you like what you see and want to mimic step #1 and #5 - then this kit is here to help you.
 
 
+![Demo video](/drag-around.gif)
+
+
 ### Installation
 
 New-school: Use the cocoa pod named `AGGeometryKit+POP`.   
