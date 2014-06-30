@@ -61,6 +61,10 @@ Animate each corner independently using these new POPAnimatableProperty's.
 Convex quadrilateral, simple quadrilateral, tangential, kite, rhombus, square, trapezium, trapezoid, parallelogram, bicentric, cyclic, POP, facebook, animation, dynamics, simulation
 
 
+## Debugging
+
+Please see the [Debugging](https://github.com/hfossli/AGGeometryKit/blob/master/README.md#debugging-quadrilaterals) section over at the [AGGeometryKit](https://github.com/hfossli/AGGeometryKit) repo.
+
 
 ## Contact
 
