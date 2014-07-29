@@ -24,7 +24,7 @@ Old-school: Grab the files found in `Source`.
 
 ## Technology
 
-It does not rely on snapshotting view hierarchy at all. Whenever you update the property `quadrilateral` (defined in [AGGeometryKit](https://github.com/hfossli/AGGeometryKit)) on the `CALayer` you are actually just applying a new `CATransform3D`. This can be done on any view wether it is an interactive UIWebView or just a plain UIImageView. This is totally cost-free! :)
+It does not rely on snapshotting view hierarchy at all. Whenever you update the property `quadrilateral` (defined in [AGGeometryKit](https://github.com/hfossli/AGGeometryKit)) on the `CALayer` you are actually just applying a new `CATransform3D`. This can be done on any view whether it is an interactive UIWebView or just a plain UIImageView. This is totally cost-free! :)
 
 
 ## Interface
