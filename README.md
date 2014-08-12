@@ -5,6 +5,9 @@ Bridging [AGGeometryKit](https://github.com/hfossli/AGGeometryKit) with [POP](ht
 See [this interesting video](https://vimeo.com/93206523) about animation principles by Cento Lodigiani. If you like what you see and want to mimic step #1 and #5 - then this kit is here to help you.
 
 
+![Demo video](/drag-around.gif)
+
+
 ### Installation
 
 New-school: Use the cocoa pod named `AGGeometryKit+POP`.   
@@ -21,7 +24,7 @@ Old-school: Grab the files found in `Source`.
 
 ## Technology
 
-It does not rely on snapshotting view hierarchy at all. Whenever you update the property `quadrilateral` (defined in [AGGeometryKit](https://github.com/hfossli/AGGeometryKit)) on the `CALayer` you are actually just applying a new `CATransform3D`. This can be done on any view wether it is an interactive UIWebView or just a plain UIImageView. This is totally cost-free! :)
+It does not rely on snapshotting view hierarchy at all. Whenever you update the property `quadrilateral` (defined in [AGGeometryKit](https://github.com/hfossli/AGGeometryKit)) on the `CALayer` you are actually just applying a new `CATransform3D`. This can be done on any view whether it is an interactive UIWebView or just a plain UIImageView. This is totally cost-free! :)
 
 
 ## Interface
@@ -57,6 +60,10 @@ Animate each corner independently using these new POPAnimatableProperty's.
 
 Convex quadrilateral, simple quadrilateral, tangential, kite, rhombus, square, trapezium, trapezoid, parallelogram, bicentric, cyclic, POP, facebook, animation, dynamics, simulation
 
+
+## Debugging
+
+Please see the [Debugging](https://github.com/hfossli/AGGeometryKit/blob/master/README.md#debugging-quadrilaterals) section over at the [AGGeometryKit](https://github.com/hfossli/AGGeometryKit) repo.
 
 
 ## Contact
