@@ -50,7 +50,7 @@ struct _POPPropertyAnimationState : _POPAnimationState
   _POPPropertyAnimationState(id __unsafe_unretained anim) : _POPAnimationState(anim),
   property(nil),
   valueType((POPValueType)0),
-  valueCount(nil),
+  valueCount(0),
   fromVec(nullptr),
   toVec(nullptr),
   currentVec(nullptr),
@@ -272,87 +272,4 @@ struct _POPPropertyAnimationState : _POPAnimationState
         [self toValue];
       } else {
         // read to value
-        readObjectValue(&toVec, obj);
-      }
-    }
-
-    // handle one time value initialization on start
-    if (started) {
-
-      // initialize current vec
-      if (!currentVec) {
-        currentVec = VectorRef(Vector::new_vector(valueCount, NULL));
-
-        // initialize current value with from value
-        // only do this on initial creation to avoid overwriting current value
-        // on paused animation continuation
-        if (currentVec && fromVec) {
-          *currentVec = *fromVec;
-        }
-      }
-
-      // ensure velocity values
-      if (!velocityVec) {
-        velocityVec = VectorRef(Vector::new_vector(valueCount, NULL));
-      }
-    }
-
-    // ensure distance value initialized
-    // depends on current value set on one time start
-    if (NULL == distanceVec) {
-
-      // not yet started animations may not have from value
-      VectorRef fromVec2 = NULL != currentVec ? currentVec : fromVec;
-
-      if (fromVec2 && toVec) {
-        Vector4r distance = toVec->vector4r();
-        distance -= fromVec2->vector4r();
-
-        if (0 != distance.squaredNorm()) {
-          distanceVec = VectorRef(Vector::new_vector(valueCount, distance));
-        }
-      }
-    }
-  }
-
-  virtual void reset(bool all) {
-    _POPAnimationState::reset(all);
-
-    if (all) {
-      currentVec = NULL;
-      previousVec = NULL;
-      previous2Vec = NULL;
-    }
-    progress = 0;
-    resetProgressMarkerState();
-    didReachToValue = false;
-    distanceVec = NULL;
-  }
-
-  void clampCurrentValue(NSUInteger clamp)
-  {
-    if (kPOPAnimationClampNone == clamp)
-      return;
-
-    // Clamp all vector values
-    CGFloat *currentValues = currentVec->data();
-    const CGFloat *fromValues = fromVec->data();
-    const CGFloat *toValues = toVec->data();
-
-    for (NSUInteger idx = 0; idx < valueCount; idx++) {
-      clampValue(currentValues[idx], fromValues[idx], toValues[idx], clamp);
-    }
-  }
-
-  void clampCurrentValue()
-  {
-    clampCurrentValue(clampMode);
-  }
-};
-
-typedef struct _POPPropertyAnimationState POPPropertyAnimationState;
-
-@interface POPPropertyAnimation ()
-
-@end
-
+        readObjectValue(&toVec
