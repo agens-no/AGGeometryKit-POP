@@ -75,5 +75,4 @@ You can reach me on twitter as [@hfossli](https://twitter.com/hfossli).
 
 Agens.no a company situated in Oslo, Norway, with some help from some very clever stackoverflow.com guys.
 
-
-[![Agens | Digital craftsmanship](http://static.agens.no/images/agens_logo_w_slogan_avenir_small.png)](http://agens.no/)
+[<img src="http://static.agens.no/images/agens_logo_w_slogan_avenir_medium.png" width="340" />](http://agens.no/)
