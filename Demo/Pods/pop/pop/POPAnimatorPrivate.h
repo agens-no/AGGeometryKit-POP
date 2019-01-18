@@ -7,7 +7,7 @@
  of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <POP/POPAnimator.h>
+#import <pop/POPAnimator.h>
 
 @class POPAnimation;
 
@@ -23,13 +23,29 @@
 
 @interface POPAnimator ()
 
-#if !TARGET_OS_PHONE
+#if !TARGET_OS_IPHONE
 /**
  Determines whether or not to use a high priority background thread for animation updates. Using a background thread can result in faster, more responsive updates, but may be less compatible. Defaults to YES.
  */
 + (BOOL)disableBackgroundThread;
 + (void)setDisableBackgroundThread:(BOOL)flag;
+
+/**
+ Determines the frequency (Hz) of the timer used when no display is available. Defaults to 60Hz.
+ */
++ (uint64_t)displayTimerFrequency;
++ (void)setDisplayTimerFrequency:(uint64_t)frequency;
 #endif
+
+/**
+ Used for externally driven animator instances.
+ */
+@property (assign, nonatomic) BOOL disableDisplayLink;
+
+/**
+ Time used when starting animations. Defaults to 0 meaning current media time is used. Exposed for unit testing.
+ */
+@property (assign, nonatomic) CFTimeInterval beginTime;
 
 /**
  Exposed for unit testing.

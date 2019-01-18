@@ -1,1 +1,0 @@
-../../AGGeometryKit/Source/AGKQuad.h

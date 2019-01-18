@@ -1,1 +1,0 @@
-../../AGGeometryKit/Source/Categories/CALayer+AGKQuad.h

@@ -1,5 +1,0 @@
-#include "Pods-AGGeometryKit.xcconfig"
-GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/AGGeometryKit" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AGGeometryKit" "${PODS_ROOT}/Headers/pop"
-OTHER_LDFLAGS = -ObjC ${PODS_AGGEOMETRYKIT_OTHER_LDFLAGS}
-PODS_ROOT = ${SRCROOT}

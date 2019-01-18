@@ -7,16 +7,14 @@
  of patent rights can be found in the PATENTS file in the same directory.
  */
 
+#import "POPAnimation.h"
+
 #import <QuartzCore/CAMediaTimingFunction.h>
 
-#import "POPAnimation.h"
+#import "POPAction.h"
 #import "POPAnimationRuntime.h"
-#import "POPAnimationTracer.h"
 #import "POPAnimationTracerInternal.h"
 #import "POPSpringSolver.h"
-#import "POPVector.h"
-#import "POPAction.h"
-#import "POPMath.h"
 
 using namespace POP;
 
@@ -37,7 +35,10 @@ typedef struct
   bool reached;
 } POPProgressMarker;
 
+typedef void (^POPAnimationDidStartBlock)(POPAnimation *anim);
+typedef void (^POPAnimationDidReachToValueBlock)(POPAnimation *anim);
 typedef void (^POPAnimationCompletionBlock)(POPAnimation *anim, BOOL finished);
+typedef void (^POPAnimationDidApplyBlock)(POPAnimation *anim);
 
 @interface POPAnimation()
 - (instancetype)_init;
@@ -202,10 +203,14 @@ struct _POPAnimationState
   CFTimeInterval startTime;
   CFTimeInterval lastTime;
   id __weak delegate;
+  POPAnimationDidStartBlock animationDidStartBlock;
+  POPAnimationDidReachToValueBlock animationDidReachToValueBlock;
   POPAnimationCompletionBlock completionBlock;
+  POPAnimationDidApplyBlock animationDidApplyBlock;
   NSMutableDictionary *dict;
   POPAnimationTracer *tracer;
   CGFloat progress;
+  NSInteger repeatCount;
   
   bool active:1;
   bool paused:1;
@@ -221,8 +226,10 @@ struct _POPAnimationState
   bool didReachToValue:1;
   bool tracing:1; // corresponds to tracer started
   bool userSpecifiedDynamics:1;
+  bool autoreverses:1;
+  bool repeatForever:1;
   bool customFinished:1;
-  
+
   _POPAnimationState(id __unsafe_unretained anim) :
   self(anim),
   type((POPAnimationType)0),
@@ -232,10 +239,14 @@ struct _POPAnimationState
   startTime(0),
   lastTime(0),
   delegate(nil),
+  animationDidStartBlock(nil),
+  animationDidReachToValueBlock(nil),
   completionBlock(nil),
+  animationDidApplyBlock(nil),
   dict(nil),
   tracer(nil),
   progress(0),
+  repeatCount(0),
   active(false),
   paused(true),
   removedOnCompletion(true),
@@ -248,6 +259,8 @@ struct _POPAnimationState
   didReachToValue(false),
   tracing(false),
   userSpecifiedDynamics(false),
+  autoreverses(false),
+  repeatForever(false),
   customFinished(false) {}
   
   virtual ~_POPAnimationState()
@@ -255,7 +268,10 @@ struct _POPAnimationState
     name = nil;
     dict = nil;
     tracer = nil;
+    animationDidStartBlock = NULL;
+    animationDidReachToValueBlock = NULL;
     completionBlock = NULL;
+    animationDidApplyBlock = NULL;
   }
   
   bool isCustom() {
@@ -310,11 +326,6 @@ struct _POPAnimationState
       active = true;
       setPaused(false);
       
-      // start us one frame in the past (when we added the animation)
-      if (0 == beginTime) {
-        time -= 1/60.;
-      }
-      
       // note start time
       startTime = lastTime = time;
       started = true;
@@ -366,6 +377,12 @@ struct _POPAnimationState
       ActionEnabler enabler;
       [delegate pop_animationDidStart:self];
     }
+
+    POPAnimationDidStartBlock block = animationDidStartBlock;
+    if (block != NULL) {
+      ActionEnabler enabler;
+      block(self);
+    }
     
     if (tracing) {
       [tracer didStart];
@@ -403,11 +420,8 @@ struct _POPAnimationState
   bool advanceTime(CFTimeInterval time, id obj) {
     bool advanced = false;
     bool computedProgress = false;
-    
     CFTimeInterval dt = time - lastTime;
-    if (dt < 0.001)
-      return advanced;
-    
+
     switch (type) {
       case kPOPAnimationSpring:
         advanced = advance(time, dt, obj);
@@ -456,6 +470,12 @@ struct _POPAnimationState
       ActionEnabler enabler;
       [delegate pop_animationDidApply:self];
     }
+
+    POPAnimationDidApplyBlock block = animationDidApplyBlock;
+    if (block != NULL) {
+      ActionEnabler enabler;
+      block(self);
+    }
   }
   
   virtual void reset(bool all) {
@@ -475,7 +495,7 @@ typedef struct _POPAnimationState POPAnimationState;
 
 @end
 
-// NSProxy extensions, for testing pursposes
+// NSProxy extensions, for testing purposes
 @interface NSProxy (POP)
 - (void)pop_addAnimation:(POPAnimation *)anim forKey:(NSString *)key;
 - (void)pop_removeAllAnimations;

@@ -8,6 +8,7 @@
  */
 
 #import "POPBasicAnimation.h"
+
 #import "POPPropertyAnimationInternal.h"
 
 // default animation duration
@@ -16,7 +17,7 @@ static CGFloat const kPOPAnimationDurationDefault = 0.4;
 // progress threshold for computing done
 static CGFloat const kPOPProgressThreshold = 1e-6;
 
-static void interpolate(POPValueType valueType, NSUInteger count, const CGFloat *fromVec, const CGFloat *toVec, CGFloat *outVec, double p)
+static void interpolate(POPValueType valueType, NSUInteger count, const CGFloat *fromVec, const CGFloat *toVec, CGFloat *outVec, CGFloat p)
 {
   switch (valueType) {
     case kPOPValueInteger:
@@ -24,8 +25,9 @@ static void interpolate(POPValueType valueType, NSUInteger count, const CGFloat 
     case kPOPValuePoint:
     case kPOPValueSize:
     case kPOPValueRect:
+    case kPOPValueEdgeInsets:
     case kPOPValueColor:
-      interpolate_vector(count, outVec, fromVec, toVec, p);
+      POPInterpolateVector(count, outVec, fromVec, toVec, p);
       break;
     default:
       NSCAssert(false, @"unhandled type %d", valueType);
@@ -38,25 +40,27 @@ struct _POPBasicAnimationState : _POPPropertyAnimationState
   CAMediaTimingFunction *timingFunction;
   double timingControlPoints[4];
   CFTimeInterval duration;
+  CFTimeInterval timeProgress;
 
   _POPBasicAnimationState(id __unsafe_unretained anim) : _POPPropertyAnimationState(anim),
+  timingFunction(nil),
+  timingControlPoints{0.},
   duration(kPOPAnimationDurationDefault),
-  timingFunction(nil)
+  timeProgress(0.)
   {
     type = kPOPAnimationBasic;
-    memset(timingControlPoints, 0, sizeof(timingControlPoints));
   }
 
   bool isDone() {
     if (_POPPropertyAnimationState::isDone()) {
       return true;
     }
-    return progress + kPOPProgressThreshold >= 1.;
+    return timeProgress + kPOPProgressThreshold >= 1.;
   }
 
   void updatedTimingFunction()
   {
-    float vec[4] = {0., 0., 0., 0.};
+    float vec[4] = {0.};
     [timingFunction getControlPointAtIndex:1 values:&vec[0]];
     [timingFunction getControlPointAtIndex:2 values:&vec[2]];
     for (NSUInteger idx = 0; idx < POP_ARRAY_COUNT(vec); idx++) {
@@ -70,22 +74,23 @@ struct _POPBasicAnimationState : _POPPropertyAnimationState
       ((POPBasicAnimation *)self).timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
     }
 
-    // cap local time to duration
-    CFTimeInterval t = MIN(time - startTime, duration) / duration;
-
-    // solve for normalized time, aka progresss [0, 1]
-    double p = timing_function_solve(timingControlPoints, t, SOLVE_EPS(duration));
-
-    // interpolate and advance
-    if (p != progress) {
-      interpolate(valueType, valueCount, fromVec->data(), toVec->data(), currentVec->data(), p);
-      progress = p;
-      return true;
+    // solve for normalized time, aka progress [0, 1]
+    CGFloat p = 1.0f;
+    if (duration > 0.0f) {
+        // cap local time to duration
+        CFTimeInterval t = MIN(time - startTime, duration) / duration;
+        p = POPTimingFunctionSolve(timingControlPoints, t, SOLVE_EPS(duration));
+        timeProgress = t;
+    } else {
+        timeProgress = 1.;
     }
 
+    // interpolate and advance
+    interpolate(valueType, valueCount, fromVec->data(), toVec->data(), currentVec->data(), p);
+    progress = p;
     clampCurrentValue();
 
-    return false;
+    return true;
   }
 };
 

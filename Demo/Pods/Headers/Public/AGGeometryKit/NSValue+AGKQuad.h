@@ -1,0 +1,1 @@
+../../../AGGeometryKit/AGGeometryKit/Categories/NSValue+AGKQuad.h

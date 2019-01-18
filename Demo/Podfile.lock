@@ -1,17 +1,24 @@
 PODS:
-  - AGGeometryKit (1.0.1):
-    - AGGeometryKit/Default
-  - AGGeometryKit/Core (1.0.1)
-  - AGGeometryKit/Default (1.0.1):
-    - AGGeometryKit/Core
-  - pop (1.0.4)
+  - AGGeometryKit (1.2.9):
+    - AGGeometryKit/CALayerProperties (= 1.2.9)
+    - AGGeometryKit/UIViewProperties (= 1.2.9)
+  - AGGeometryKit/CALayerProperties (1.2.9)
+  - AGGeometryKit/UIViewProperties (1.2.9)
+  - pop (1.0.10)
 
 DEPENDENCIES:
-  - AGGeometryKit (~> 1.0.1)
-  - pop (~> 1.0.4)
+  - AGGeometryKit (~> 1.0)
+  - pop (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AGGeometryKit
+    - pop
 
 SPEC CHECKSUMS:
-  AGGeometryKit: 995cf78e880fa0a88f109e0ac58041d3314d2315
-  pop: 63a4f5e8942077fed2efe195036ecc572c71c48c
+  AGGeometryKit: 5e820bd2a8290e3b1e3a1517a49c65ae42c239c9
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
 
-COCOAPODS: 0.32.1
+PODFILE CHECKSUM: 26e8cfa45d1aae2ffef875895653c12372761db7
+
+COCOAPODS: 1.5.3

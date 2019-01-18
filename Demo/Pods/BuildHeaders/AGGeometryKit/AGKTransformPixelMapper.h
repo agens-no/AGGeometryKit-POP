@@ -1,1 +1,0 @@
-../../AGGeometryKit/Source/Classes/AGKTransformPixelMapper.h

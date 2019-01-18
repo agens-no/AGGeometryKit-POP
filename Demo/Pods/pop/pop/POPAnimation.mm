@@ -7,22 +7,24 @@
  of patent rights can be found in the PATENTS file in the same directory.
  */
 
+#import "POPAnimationExtras.h"
 #import "POPAnimationInternal.h"
-#import "POPAnimationTracerInternal.h"
 
 #import <objc/runtime.h>
-#include <unordered_map>
 
-#import "POPAnimationExtras.h"
-#import "POPAnimationRuntime.h"
-#import "POPAnimatorPrivate.h"
 #import "POPAction.h"
+#import "POPAnimationRuntime.h"
+#import "POPAnimationTracerInternal.h"
+#import "POPAnimatorPrivate.h"
 
 using namespace POP;
 
 #pragma mark - POPAnimation
 
 @implementation POPAnimation
+@synthesize solver = _solver;
+@synthesize currentValue = _currentValue;
+@synthesize progressMarkers = _progressMarkers;
 
 #pragma mark - Lifecycle
 
@@ -76,11 +78,54 @@ using namespace POP;
   _state->setPaused(paused ? true : false);
 }
 
+- (NSInteger)repeatCount
+{
+  if (_state->autoreverses) {
+    return _state->repeatCount / 2;
+  } else {
+    return _state->repeatCount;
+  }
+}
+
+- (void)setRepeatCount:(NSInteger)repeatCount
+{
+  if (repeatCount > 0) {
+    if (repeatCount > NSIntegerMax / 2) {
+      repeatCount = NSIntegerMax / 2;
+    }
+
+    if (_state->autoreverses) {
+      _state->repeatCount = (repeatCount * 2);
+    } else {
+      _state->repeatCount = repeatCount;
+    }
+  }
+}
+
+- (BOOL)autoreverses
+{
+  return _state->autoreverses;
+}
+
+- (void)setAutoreverses:(BOOL)autoreverses
+{
+  _state->autoreverses = autoreverses;
+  if (autoreverses) {
+    if (_state->repeatCount == 0) {
+      [self setRepeatCount:1];
+    }
+  }
+}
+
 FB_PROPERTY_GET(POPAnimationState, type, POPAnimationType);
+DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, animationDidStartBlock, setAnimationDidStartBlock:, POPAnimationDidStartBlock);
+DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, animationDidReachToValueBlock, setAnimationDidReachToValueBlock:, POPAnimationDidReachToValueBlock);
 DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, completionBlock, setCompletionBlock:, POPAnimationCompletionBlock);
+DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, animationDidApplyBlock, setAnimationDidApplyBlock:, POPAnimationDidApplyBlock);
 DEFINE_RW_PROPERTY_OBJ_COPY(POPAnimationState, name, setName:, NSString*);
 DEFINE_RW_PROPERTY(POPAnimationState, beginTime, setBeginTime:, CFTimeInterval);
 DEFINE_RW_FLAG(POPAnimationState, removedOnCompletion, removedOnCompletion, setRemovedOnCompletion:);
+DEFINE_RW_FLAG(POPAnimationState, repeatForever, repeatForever, setRepeatForever:);
 
 - (id)valueForUndefinedKey:(NSString *)key
 {
@@ -100,11 +145,10 @@ DEFINE_RW_FLAG(POPAnimationState, removedOnCompletion, removedOnCompletion, setR
 
 - (POPAnimationTracer *)tracer
 {
-  POPAnimationState *s = POPAnimationGetState(self);
-  if (!s->tracer) {
-    s->tracer = [[POPAnimationTracer alloc] initWithAnimation:self];
+  if (!_state->tracer) {
+    _state->tracer = [[POPAnimationTracer alloc] initWithAnimation:self];
   }
-  return s->tracer;
+  return _state->tracer;
 }
 
 - (NSString *)description
@@ -223,6 +267,37 @@ POPAnimationState *POPAnimationGetState(POPAnimation *a)
 - (id)pop_animationForKey:(NSString *)key
 {
   return [[POPAnimator sharedAnimator] animationForObject:self key:key];
+}
+
+@end
+
+@implementation POPAnimation (NSCopying)
+
+- (instancetype)copyWithZone:(NSZone *)zone
+{
+  /*
+   * Must use [self class] instead of POPAnimation so that subclasses can call this via super.
+   * Even though POPAnimation and POPPropertyAnimation throw exceptions on init,
+   * it's safe to call it since you can only copy objects that have been successfully created.
+   */
+  POPAnimation *copy = [[[self class] allocWithZone:zone] init];
+  
+  if (copy) {
+    copy.name = self.name;
+    copy.beginTime = self.beginTime;
+    copy.delegate = self.delegate;
+    copy.animationDidStartBlock = self.animationDidStartBlock;
+    copy.animationDidReachToValueBlock = self.animationDidReachToValueBlock;
+    copy.completionBlock = self.completionBlock;
+    copy.animationDidApplyBlock = self.animationDidApplyBlock;
+    copy.removedOnCompletion = self.removedOnCompletion;
+    
+    copy.autoreverses = self.autoreverses;
+    copy.repeatCount = self.repeatCount;
+    copy.repeatForever = self.repeatForever;
+  }
+    
+  return copy;
 }
 
 @end

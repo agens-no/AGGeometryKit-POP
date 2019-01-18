@@ -38,6 +38,7 @@ struct _POPPropertyAnimationState : _POPAnimationState
   VectorRef previousVec;
   VectorRef previous2Vec;
   VectorRef velocityVec;
+  VectorRef originalVelocityVec;
   VectorRef distanceVec;
   CGFloat roundingFactor;
   NSUInteger clampMode;
@@ -57,6 +58,7 @@ struct _POPPropertyAnimationState : _POPAnimationState
   previousVec(nullptr),
   previous2Vec(nullptr),
   velocityVec(nullptr),
+  originalVelocityVec(nullptr),
   distanceVec(nullptr),
   roundingFactor(0),
   clampMode(0),
@@ -105,13 +107,11 @@ struct _POPPropertyAnimationState : _POPAnimationState
 
   // returns a copy of the currentVec, rounding if needed
   VectorRef currentValue() {
-    if (!shouldRound()) {
-      return VectorRef(Vector::new_vector(currentVec.get()));
-    } else {
-      VectorRef vec = VectorRef(Vector::new_vector(currentVec.get()));
+    VectorRef vec = VectorRef(Vector::new_vector(currentVec.get()));
+    if (shouldRound()) {
       vec->subRound(1 / roundingFactor);
-      return vec;
     }
+      return vec;
   }
 
   void resetProgressMarkerState()
@@ -147,27 +147,19 @@ struct _POPPropertyAnimationState : _POPAnimationState
     dynamicsThreshold = property.threshold;
   }
 
-  bool advanceProgress(CGFloat p)
+  void finalizeProgress()
   {
-    bool advanced = progress != p;
-    if (advanced) {
-      progress = p;
-      NSUInteger count = valueCount;
-      VectorRef outVec(Vector::new_vector(count, NULL));
+    progress = 1.0;
+    NSUInteger count = valueCount;
+    VectorRef outVec(Vector::new_vector(count, NULL));
 
-      if (1.0 == progress) {
-        if (outVec && toVec) {
-          *outVec = *toVec;
-        }
-      } else {
-        interpolate_vector(count, vec_data(outVec), vec_data(fromVec), vec_data(toVec), progress);
-      }
-
-      currentVec = outVec;
-      clampCurrentValue();
-      delegateProgress();
+    if (outVec && toVec) {
+      *outVec = *toVec;
     }
-    return advanced;
+
+    currentVec = outVec;
+    clampCurrentValue();
+    delegateProgress();
   }
 
   void computeProgress() {
@@ -219,7 +211,7 @@ struct _POPPropertyAnimationState : _POPAnimationState
             didReachToValue = true;
             const CGFloat *distanceValues = distanceVec->data();
             for (NSUInteger idx = 0; idx < valueCount; idx++) {
-              didReachToValue &= signbit(distance[idx]) != signbit(distanceValues[idx]);
+              didReachToValue &= (signbit(distance[idx]) != signbit(distanceValues[idx]));
             }
           }
         }
@@ -239,6 +231,12 @@ struct _POPPropertyAnimationState : _POPAnimationState
       [delegate pop_animationDidReachToValue:self];
     }
 
+    POPAnimationDidReachToValueBlock block = animationDidReachToValueBlock;
+    if (block != NULL) {
+      ActionEnabler enabler;
+      block(self);
+    }
+
     if (tracing) {
       [tracer didReachToValue:POPBox(currentValue(), valueType, true)];
     }
@@ -247,7 +245,7 @@ struct _POPPropertyAnimationState : _POPAnimationState
   void readObjectValue(VectorRef *ptrVec, id obj)
   {
     // use current object value as from value
-    pop_animatable_read_block read = property.readBlock;
+    POPAnimatablePropertyReadBlock read = property.readBlock;
     if (NULL != read) {
 
       Vector4r vec = read_values(read, obj, valueCount);
@@ -272,4 +270,90 @@ struct _POPPropertyAnimationState : _POPAnimationState
         [self toValue];
       } else {
         // read to value
-        readObjectValue(&toVec
+        readObjectValue(&toVec, obj);
+      }
+    }
+
+    // handle one time value initialization on start
+    if (started) {
+
+      // initialize current vec
+      if (!currentVec) {
+        currentVec = VectorRef(Vector::new_vector(valueCount, NULL));
+
+        // initialize current value with from value
+        // only do this on initial creation to avoid overwriting current value
+        // on paused animation continuation
+        if (currentVec && fromVec) {
+          *currentVec = *fromVec;
+        }
+      }
+
+      // ensure velocity values
+      if (!velocityVec) {
+        velocityVec = VectorRef(Vector::new_vector(valueCount, NULL));
+      }
+      if (!originalVelocityVec) {
+        originalVelocityVec = VectorRef(Vector::new_vector(valueCount, NULL));
+      }
+    }
+
+    // ensure distance value initialized
+    // depends on current value set on one time start
+    if (NULL == distanceVec) {
+
+      // not yet started animations may not have current value
+      VectorRef fromVec2 = NULL != currentVec ? currentVec : fromVec;
+
+      if (fromVec2 && toVec) {
+        Vector4r distance = toVec->vector4r();
+        distance -= fromVec2->vector4r();
+
+        if (0 != distance.squaredNorm()) {
+          distanceVec = VectorRef(Vector::new_vector(valueCount, distance));
+        }
+      }
+    }
+  }
+
+  virtual void reset(bool all) {
+    _POPAnimationState::reset(all);
+
+    if (all) {
+      currentVec = NULL;
+      previousVec = NULL;
+      previous2Vec = NULL;
+    }
+    progress = 0;
+    resetProgressMarkerState();
+    didReachToValue = false;
+    distanceVec = NULL;
+  }
+
+  void clampCurrentValue(NSUInteger clamp)
+  {
+    if (kPOPAnimationClampNone == clamp)
+      return;
+
+    // Clamp all vector values
+    CGFloat *currentValues = currentVec->data();
+    const CGFloat *fromValues = fromVec->data();
+    const CGFloat *toValues = toVec->data();
+
+    for (NSUInteger idx = 0; idx < valueCount; idx++) {
+      clampValue(currentValues[idx], fromValues[idx], toValues[idx], clamp);
+    }
+  }
+
+  void clampCurrentValue()
+  {
+    clampCurrentValue(clampMode);
+  }
+};
+
+typedef struct _POPPropertyAnimationState POPPropertyAnimationState;
+
+@interface POPPropertyAnimation ()
+
+@end
+

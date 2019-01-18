@@ -7,8 +7,8 @@
  of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#import <POP/POPAnimatableProperty.h>
-#import <POP/POPAnimation.h>
+#import <pop/POPAnimatableProperty.h>
+#import <pop/POPAnimation.h>
 
 /**
  @abstract Flags for clamping animation values.
@@ -61,5 +61,16 @@ typedef NS_OPTIONS(NSUInteger, POPAnimationClampFlags)
  @discussion Addition may be type dependent. Defaults to NO.
  */
 @property (assign, nonatomic, getter = isAdditive) BOOL additive;
+
+@end
+
+@interface POPPropertyAnimation (CustomProperty)
+
++ (instancetype)animationWithCustomPropertyNamed:(NSString *)name
+                                       readBlock:(POPAnimatablePropertyReadBlock)readBlock
+                                      writeBlock:(POPAnimatablePropertyWriteBlock)writeBlock;
+
++ (instancetype)animationWithCustomPropertyReadBlock:(POPAnimatablePropertyReadBlock)readBlock
+                                          writeBlock:(POPAnimatablePropertyWriteBlock)writeBlock;
 
 @end

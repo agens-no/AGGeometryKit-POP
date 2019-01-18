@@ -1,4 +1,6 @@
 platform :ios, '6.0'
 
-pod 'pop', '~> 1.0.4'
-pod 'AGGeometryKit', '~> 1.0.1'
+target 'AGGeometryKit+Pop' do
+    pod 'pop', '~> 1.0'
+    pod 'AGGeometryKit', '~> 1.0'
+end

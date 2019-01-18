@@ -1,1 +1,0 @@
-../../AGGeometryKit/Source/AGKBitOperations.h

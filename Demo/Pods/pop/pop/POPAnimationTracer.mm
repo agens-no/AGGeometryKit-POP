@@ -22,6 +22,7 @@
   NSMutableArray *_events;
   BOOL _animationHasVelocity;
 }
+@synthesize shouldLogAndResetOnCompletion = _shouldLogAndResetOnCompletion;
 
 static POPAnimationEvent *create_event(POPAnimationTracer *self, POPAnimationEventType type, id value = nil, bool recordAnimation = false)
 {
@@ -31,18 +32,19 @@ static POPAnimationEvent *create_event(POPAnimationTracer *self, POPAnimationEve
     : self->_animationState->lastTime;
 
   POPAnimationEvent *event;
+  __strong POPAnimation* animation = self->_animation;
 
   if (!value) {
     event = [[POPAnimationEvent alloc] initWithType:type time:time];
   } else {
     event = [[POPAnimationValueEvent alloc] initWithType:type time:time value:value];
     if (self->_animationHasVelocity) {
-      [(POPAnimationValueEvent *)event setVelocity:[(POPSpringAnimation *)self->_animation velocity]];
+      [(POPAnimationValueEvent *)event setVelocity:[(POPSpringAnimation *)animation velocity]];
     }
   }
 
   if (recordAnimation) {
-    event.animationDescription = [self->_animation description];
+    event.animationDescription = [animation description];
   }
 
   return event;
@@ -140,6 +142,12 @@ static POPAnimationEvent *create_event(POPAnimationTracer *self, POPAnimationEve
 - (void)didReachToValue:(id)aValue
 {
   POPAnimationEvent *event = create_event(self, kPOPAnimationEventDidReachToValue, aValue);
+  [_events addObject:event];
+}
+
+- (void)autoreversed
+{
+  POPAnimationEvent *event = create_event(self, kPOPAnimationEventAutoreversed);
   [_events addObject:event];
 }
 

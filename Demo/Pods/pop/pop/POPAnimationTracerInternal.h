@@ -9,12 +9,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import <POP/POPAnimationTracer.h>
+#import <pop/POPAnimationTracer.h>
 
 @interface POPAnimationTracer (Internal)
 
 /**
- @abstract Designated initalizer. Pass the animation being traced.
+ @abstract Designated initializer. Pass the animation being traced.
  */
 - (instancetype)initWithAnimation:(POPAnimation *)anAnim;
 
@@ -87,5 +87,10 @@
  @abstract Records did reach to value.
  */
 - (void)didReachToValue:(id)aValue;
+
+/**
+ @abstract Records when an autoreverse animation takes place.
+ */
+- (void)autoreversed;
 
 @end
