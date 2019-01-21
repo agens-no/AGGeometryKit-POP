@@ -76,7 +76,7 @@
 
         anim.springSpeed = 14;
         anim.springBounciness = 15;
-        anim.toValue = [NSValue valueWithCGPoint:desiredQuad.v[cornerIndex]];
+        anim.toValue = [NSValue valueWithCGPoint:AGKQuadGetPointForCorner(desiredQuad, AGKQuadCornerForCornerIndex(cornerIndex))];
     }
 
 }

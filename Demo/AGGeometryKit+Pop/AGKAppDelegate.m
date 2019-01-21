@@ -25,14 +25,7 @@
 
 @implementation AGKAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [self.window makeKeyAndVisible];
-
-    // hack: tabbar is not laying out subviews as expected
-    self.tabBarController.selectedIndex = 1;
-    self.tabBarController.selectedIndex = 0;
-
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return YES;
 }
 

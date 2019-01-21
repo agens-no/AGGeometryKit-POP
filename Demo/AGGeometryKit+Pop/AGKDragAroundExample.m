@@ -61,7 +61,7 @@
 
     for(int cornerIndex = 0; cornerIndex < 4; cornerIndex++)
     {
-        CGPoint currentCornerPoint = quad.v[cornerIndex];
+        CGPoint currentCornerPoint = AGKQuadGetPointForCorner(quad, AGKQuadCornerForCornerIndex(cornerIndex));
         CGFloat distance = fabs(CGPointLengthBetween_AGK(point, currentCornerPoint));
 
         if(distance > longestDistanceFromTouch)
@@ -128,11 +128,11 @@
             [self.imageView.layer pop_addAnimation:anim forKey:propertyName];
         }
 
-        CGPoint currentCornerPoint = innerQuad.v[cornerIndex];
+        CGPoint currentCornerPoint = AGKQuadGetPointForCorner(innerQuad, AGKQuadCornerForCornerIndex(cornerIndex));
         CGFloat distance = fabs(CGPointLengthBetween_AGK(pointOfTouchInside, currentCornerPoint));
         CGFloat dragCoefficient = AGKRemapToZeroOne(distance, longestDistanceFromTouch, 0);
-
-        anim.toValue = [NSValue valueWithCGPoint:self.desiredQuad.v[cornerIndex]];
+        
+        anim.toValue = [NSValue valueWithCGPoint:AGKQuadGetPointForCorner(self.desiredQuad, AGKQuadCornerForCornerIndex(cornerIndex))];
         tuning(anim, cornerIndex, dragCoefficient);
     }
 
